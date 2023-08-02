@@ -52,7 +52,7 @@ show_tile: false
 				</header>
 				<p>I am part of the Time Domain Astronomy Research Group at Purdue University, run by Dr. Danny Milisavljevic.</p>
 				<ul class="actions">
-					<li><a href="https://www.physics.purdue.edu/milisavljevic/" class="button">Learn more</a></li>
+					<li><a href="https://www.physics.purdue.edu/milisavljevic/" class="button">Group Website</a></li>
 				</ul>
 			</div>
 		</div>
