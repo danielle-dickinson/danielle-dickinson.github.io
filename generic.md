@@ -13,9 +13,9 @@ show_tile: false
 <section id="one">
 	<div class="inner">
 		<header class="major">
-			<h1>I am Danielle :)</h1>
+			<h1>I am Danielle!</h1>
 		</header>
 
 <h4>Left &amp; Right</h4>
-<p><span class="image left"><img src="{% link assets/images/Danielle.jpg %}" alt="" /></span>Lorem ipsum dolor sit accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget tempus vestibulum ante ipsum primis in faucibus magna blandit adipiscing eu felis iaculis.</p>
-<p><span class="image right"><img src="{% link assets/images/IMG_7984.jpg %}" alt="" /></span>Lorem ipsum dolor sit accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget tempus vestibulum ante ipsum primis in faucibus magna blandit adipiscing eu felis iaculis.</p>
+<p><span class="image left"><img src="{% link assets/images/Danielle.jpg %}" alt="" /></span>I am from Chicago, IL. I complteted my Astronomy (Honors) and Physics Majors from The University of Arizona in Spring 2021. I began work as a PhD student at Purdue University the following semester. </p>
+<p><span class="image right"><img src="{% link assets/images/IMG_7984.jpg %}" alt="" /></span>I love cooking and being outdoors. Namely, I enjoy rock climbing and stargazing, which often overlap due to the remoteness of the best climbing areas.</p>
