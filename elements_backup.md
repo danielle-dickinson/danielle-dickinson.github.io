@@ -2,8 +2,8 @@
 layout: page
 title: Outreach
 image: assets/images/pic01.jpg
-nav-menu: true
-show_tile: true
+nav-menu: false
+show_tile: false
 ---
 
 <!-- Main -->
