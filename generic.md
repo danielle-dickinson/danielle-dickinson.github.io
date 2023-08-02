@@ -1,5 +1,5 @@
 ---
-layout: generic
+layout: allposts
 title: About Me
 description: Supernovae
 image: assets/images/Danielle.jpg
