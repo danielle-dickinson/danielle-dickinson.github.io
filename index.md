@@ -7,5 +7,3 @@ image: null
 author: null
 show_tile: false
 ---
-
-I study astronomy! 
