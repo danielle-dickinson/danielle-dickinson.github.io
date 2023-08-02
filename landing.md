@@ -41,19 +41,23 @@ show_tile: false
 			</div>
 		</div>
 	</section>
+	<section>
+		<a href="generic.html" class="image">
+			<img src="{% link assets/images/PU-V-Full-RGB.png %}" alt="" data-position="top center" />
+		</a>
+		<div class="content">
+			<div class="inner">
+				<header class="major">
+					<h3>The Time Domain Astronomy Research Group</h3>
+				</header>
+				<p>I am part of the Time Domain Astronomy Research Group at Purdue University, run by Dr. Danny Milisavljevic.</p>
+				<ul class="actions">
+					<li><a href="https://www.physics.purdue.edu/milisavljevic/" class="button">Learn more</a></li>
+				</ul>
+			</div>
+		</div>
+	</section>
 </section>
 
-<!-- Three -->
-<section id="three">
-	<div class="inner">
-		<header class="major">
-			<h2>The Time Domain Astronomy Research Group</h2>
-		</header>
-		<p>I am part of the Time Domain Astronomy Research Group at Purdue University, run by Dr. Danny Milisavljevic.</p>
-		<ul class="actions">
-			<li><a href="https://www.physics.purdue.edu/milisavljevic/" class="button next">Group Website</a></li>
-		</ul>
-	</div>
-</section>
 
 </div>
