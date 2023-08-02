@@ -13,7 +13,7 @@ show_tile: false
 <!-- Two -->
 <section id="two" class="spotlights">
 	<section>
-		<a href="generic.html" class="image">
+		<a href="https://orcid.org/0000-0003-0913-4120" class="image">
 			<img src="{% link assets/images/IIn_schematic.png %}" alt="" data-position="center center" />
 		</a>
 		<div class="content">
@@ -32,7 +32,7 @@ show_tile: false
 		</div>
 	</section>
 	<section>
-		<a href="generic.html" class="image">
+		<a href="https://www.physics.purdue.edu/milisavljevic/" class="image">
 			<img src="{% link assets/images/PU-V-Full-RGB.png %}" alt="" data-position="top center" />
 		</a>
 		<div class="content">
