@@ -2,7 +2,7 @@
 layout: generic
 title: About Me
 description: Supernovae
-image: assets/images/pic11.jpg
+image: assets/images/Danielle.jpg
 nav-menu: true
 show_tile: false
 ---
