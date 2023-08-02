@@ -14,7 +14,7 @@ show_tile: false
 <section id="two" class="spotlights">
 	<section>
 		<a href="https://orcid.org/0000-0003-0913-4120" class="image">
-			<img src="{% link assets/images/IIn_schematic.png %}" alt="" height = 500 width = 800 data-position="center center" />
+			<img src="{% link assets/images/IIn_schematic.png %}" alt="" height = 500 width = 1000 data-position="center center" />
 		</a>
 		<div class="content">
 			<div class="inner">
