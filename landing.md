@@ -31,7 +31,7 @@ show_tile: false
 				<header class="major">
 					<h3>Selected Publications</h3>
 				</header>
-				<p>Subrayan, B. M., Milisavljevic, D., Chornock, R., et al. (incl. <b>Dickinson, D. A.</b>b>), 2023. Scary Barbie: An Extremely Energetic, Long-duration Tidal Disruption Event Candidate without a Detected Host Galaxy at z = 0.995, ApJL, 914, L9 
+				<p>Subrayan, B. M., Milisavljevic, D., Chornock, R., et al. (incl. <b>Dickinson, D. A.</b>), 2023. Scary Barbie: An Extremely Energetic, Long-duration Tidal Disruption Event Candidate without a Detected Host Galaxy at z = 0.995, ApJL, 914, L9 
 				</p>
 				<ul class="actions">
 					<li><a href="https://orcid.org/0000-0003-0913-4120" class="button">See All Publications</a></li>
