@@ -31,7 +31,7 @@ show_tile: false
 				<header class="major">
 					<h3>Selected Publications</h3>
 				</header>
-				<p>1. <b>Dickinson, D. A.</b>, Smith, N., Andrews, J., et al., 2023. The Superluminous Type IIn Supernova ASASSN-15ua: Part of a continuum in extreme precursor mass loss
+				<p>1. <b>Dickinson, D. A.</b>, Smith, N., Andrews, J., et al., 2023. The Superluminous Type IIn Supernova ASASSN-15ua: Part of a continuum in extreme precursor mass loss, Submitted
 				<br>
 					2. Subrayan, B. M., Milisavljevic, D., Chornock, R., et al. (incl. <b>Dickinson, D. A.</b>), 2023. Scary Barbie: An Extremely Energetic, Long-duration Tidal Disruption Event Candidate without a Detected Host Galaxy at z = 0.995, ApJL, 914, L9 
 				</p>
