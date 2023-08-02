@@ -33,7 +33,7 @@ show_tile: false
 	</section>
 	<section>
 		<a href="https://www.physics.purdue.edu/milisavljevic/" class="image">
-			<img src="{% link assets/images/PU-V-Full-RGB.png %}" alt="" data-position="top center" />
+			<img src="{% link assets/images/PU-V-Full-Rev-RGB.png %}" alt="" data-position="top center" />
 		</a>
 		<div class="content">
 			<div class="inner">
