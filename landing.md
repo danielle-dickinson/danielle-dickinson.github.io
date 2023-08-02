@@ -1,5 +1,5 @@
 ---
-title: Publications
+title: Research
 layout: landing
 description: 'I named Barbie'
 image: assets/images/pic07.jpg
