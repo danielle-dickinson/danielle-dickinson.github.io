@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: generic
 title: About Me
 description: Supernovae
 image: assets/images/pic11.jpg
