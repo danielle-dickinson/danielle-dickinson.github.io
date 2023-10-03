@@ -2,7 +2,7 @@
 layout: generic
 title: About Me
 image: assets/images/Danielle.jpg
-nav-menu: true
+nav-menu: false
 show_tile: false
 ---
 
