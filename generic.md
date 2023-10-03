@@ -1,6 +1,6 @@
 ---
 layout: page
-title: About Me
+title: Blog
 image: assets/images/Danielle.jpg
 nav-menu: true
 show_tile: false
