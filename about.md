@@ -1,6 +1,7 @@
 ---
 layout: page
 title: About Me
+'landing-title'=About Me
 image: assets/images/Danielle.jpg
 nav-menu: true
 show_tile: false
