@@ -9,44 +9,29 @@ author: null
 show_tile: true
 ---
 
-<div class="header">
-  <h2>Blog Name</h2>
-</div>
-
+<!-- The grid: three columns -->
 <div class="row">
-  <div class="leftcolumn">
-    <div class="card">
-      <h2>TITLE HEADING</h2>
-      <h5>Title description, Dec 7, 2017</h5>
-      <div class="fakeimg" style="height:200px;">Image</div>
-      <p>Some text..</p>
-    </div>
-    <div class="card">
-      <h2>TITLE HEADING</h2>
-      <h5>Title description, Sep 2, 2017</h5>
-      <div class="fakeimg" style="height:200px;">Image</div>
-      <p>Some text..</p>
-    </div>
-  </div>
-  <div class="rightcolumn">
-    <div class="card">
-      <h2>About Me</h2>
-      <div class="fakeimg" style="height:100px;">Image</div>
-      <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
-    </div>
-    <div class="card">
-      <h3>Popular Post</h3>
-      <div class="fakeimg">Image</div><br>
-      <div class="fakeimg">Image</div><br>
-      <div class="fakeimg">Image</div>
-    </div>
-    <div class="card">
-      <h3>Follow Me</h3>
-      <p>Some text..</p>
-    </div>
-  </div>
+  <div class="column" onclick="openTab('b1');" style="background:green;">Box 1</div>
+  <div class="column" onclick="openTab('b2');" style="background:blue;">Box 2</div>
+  <div class="column" onclick="openTab('b3');" style="background:red;">Box 3</div>
 </div>
 
-<div class="footer">
-  <h2>Footer</h2>
+<!-- The expanding grid (hidden by default) -->
+<div id="b1" class="containerTab" style="display:none;background:green">
+  <!-- If you want the ability to close the container, add a close button -->
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">x</span>
+  <h2>Box 1</h2>
+  <p>Lorem ipsum..</p>
+</div>
+
+<div id="b2" class="containerTab" style="display:none;background:blue">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">x</span>
+  <h2>Box 2</h2>
+  <p>Lorem ipsum..</p>
+</div>
+
+<div id="b3" class="containerTab" style="display:none;background:red">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">x</span>
+  <h2>Box 3</h2>
+  <p>Lorem ipsum..</p>
 </div>
