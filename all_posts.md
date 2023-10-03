@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: generic
 title: About Me
 image: assets/images/Danielle.jpg
 nav-menu: true
