@@ -9,7 +9,7 @@ show_tile: false
 
 <!-- Main -->
 <div id="main">
-<a href="https://drive.google.com/file/d/1kF0uPiWVcYSA0O951wNmk7PGJoigynIW/view?usp=sharing">View My CV Here</a>
+
 <!-- Two -->
 <section id="two" class="spotlights">
 	<section>
