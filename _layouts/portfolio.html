@@ -19,13 +19,8 @@ s/<!DOCTYPE HTML>
 
 				<!-- Header -->
 					<header id="header">
-						<h1><a href="index.html"><strong>ART BY</strong> D. Dickinson</a></h1>
-						<nav>
-							<ul>
-								<!-- <li><a href="#footer" class="icon solid fa-info-circle">About</a></li> -->
-								<li><a href="#footer" class="link"></a></li>
-							</ul>
-							<nav id="menu">
+						<!-- Menu -->
+<nav id="menu">
 	<ul class="links">
         {% for page in site.pages %}
 		    {% if page.layout == "home" %}
@@ -40,7 +35,6 @@ s/<!DOCTYPE HTML>
 	</ul>
 
 </nav>
-						</nav>
 					</header>
 
 				<!-- Main -->
