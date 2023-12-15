@@ -17,7 +17,7 @@ show_tile: true
 			<h1>I am Danielle!</h1>
 		</header>
 					<article class="thumb">
-							<a href="assets/images/jazz.jpg" class="image"><img src="assets/images/jazz.jpg" alt="" /></a>
+							<a href="assets/images/pic01.jpg" class="image"><img src="assets/images/pic01.jpg" alt="" /></a>
 							<h2>View from Mont Royale, Montreal.</h2>
 							<p>Watercolor, August 2019.</p>
 						</article>
