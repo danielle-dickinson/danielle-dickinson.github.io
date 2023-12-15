@@ -108,8 +108,23 @@
 			}
 		}
 
-		&.special {
+		&.orange {
 			background-color: #FFBF00;
+			box-shadow: none;
+			color: _palette(bg);
+			font-size:0.9em;
+
+			&:hover, &:active {
+				background-color: _palette(highlight);
+				color: _palette(bg) !important;
+			}
+
+			&:active {
+				background-color: desaturate(darken(_palette(highlight), 15), 5);
+			}
+		}
+		&.special {
+			background-color: _palette(bg);
 			box-shadow: none;
 			color: _palette(bg);
 			font-size:0.9em;
