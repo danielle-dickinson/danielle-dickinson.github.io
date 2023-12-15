@@ -1,5 +1,11 @@
 @import url(fontawesome-all.min.css);
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,400,400italic");
+@import 'libs/vars';
+@import 'libs/functions';
+@import 'libs/mixins';
+@import 'libs/skel';
+@import 'font-awesome.min.css';
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,600,600italic');
 
 /*
 	Multiverse by HTML5 UP
@@ -163,7 +169,7 @@ input, select, textarea {
 	}
 
 	body {
-		background: #242629;
+		background: #242943;
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
