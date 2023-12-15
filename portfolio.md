@@ -20,7 +20,6 @@ show_tile: true
 							<h2>View from Mont Royale, Montreal.</h2>
 							<p>Watercolor, August 2019.</p>
 						</article>
-
   					<article class="thumb">
 							<a href="assets/images/teamSN_2022.png" class="image"><img src="assets/images/teamSN_2022.png" alt="" /></a>
 							<h2>View from Mont Royale, Montreal.</h2>
