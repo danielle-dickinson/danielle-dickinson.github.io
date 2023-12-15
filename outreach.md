@@ -20,3 +20,6 @@ show_tile: true
 
 <p>As a student at the University of Arizona, I worked at the Flandrau Science Center and Planetarium. I was a science center interpreter and a plantarium operator, educating the public via Flandrau's many interdisciplinary exhibits and via star talks and many planetarium shows. </p>
 
+ <iframe width="420" height="315"
+src="https://www.youtube.com/watch?v=0oV_gWa4D2o">
+</iframe> 
