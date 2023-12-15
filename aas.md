@@ -1,7 +1,7 @@
 ---
 layout: page
 title: AAS 243
-image: assets/images/jazz.jpg
+image: assets/images/morgan-petroski-ZCX1Nyok66c-unsplash.jpg
 nav-menu: true
 show_tile: true
 ---
@@ -13,7 +13,7 @@ show_tile: true
 <section id="one">
 	<div class="inner">
 		<header class="major">
-			<h1>Elements</h1>
+			<h1>AAS 243</h1>
 		</header>
 
 <!-- Content -->
