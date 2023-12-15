@@ -21,8 +21,9 @@ show_tile: true
 							<h2>View from Mont Royale, Montreal.</h2>
 							<p>Watercolor, August 2019.</p>
 						</article>
+	</div>
 
-
+</div>
   		<!-- Scripts -->
 			<script src="assets_portfolio/js/jquery.min.js"></script>
 			<script src="assets_portfolio/js/jquery.poptrox.min.js"></script>
