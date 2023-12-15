@@ -1,7 +1,7 @@
 ---
 layout: page
 title: AAS 243
-image: assets/images/pic01.jpg
+image: assets/images/jazz.jpg
 nav-menu: true
 show_tile: true
 ---
