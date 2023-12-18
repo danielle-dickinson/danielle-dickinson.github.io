@@ -14,7 +14,7 @@ show_tile: false
 <section id="two" class="spotlights">
 	<section>
 		<a href="https://orcid.org/0000-0003-0913-4120" class="image">
-			<img src="{% link assets/images/IIn.jpg %}" alt="" height = 500 width = 1000 data-position="center center" />
+			<img src="{% link assets/images/IIn.jpg %}" alt="" height = auto width = auto data-position="center center" />
 		</a>
 		<div class="content">
 			<div class="inner">
@@ -23,11 +23,11 @@ show_tile: false
 				</header>
 				<p>1. <b>Dickinson, D. A.</b>, Smith, N., Andrews, J., et al., 2023. The Superluminous Type IIn Supernova ASASSN-15ua: Part of a continuum in extreme precursor mass loss, MNRAS, 527, 3 
 				<br>
-					2. <b>Dickinson, D.</b>, Milisavlejvic, D., Garrettson, B., Dessart, L., et al. Intense, eXtreme, Fleeting: Rapid Follow Up Echelle Spectra of SN 2023ixf, In Prep.
+					2. <b>Dickinson, D. A.</b>, Milisavlejvic, D., Garrettson, B., Dessart, L., et al. Intense, eXtreme, Fleeting: Rapid Follow Up Echelle Spectra of SN 2023ixf, In Prep.
 				<br>
 					3. Subrayan, B. M., Milisavljevic, D., Chornock, R., et al. (incl. <b>Dickinson, D. A.</b>), 2023. Scary Barbie: An Extremely Energetic, Long-duration Tidal Disruption Event Candidate without a Detected Host Galaxy at z = 0.995, ApJL, 914, L9 
 				<br>
-					4. Milisavljevic, D., Temim, T., De Looze, I., <b>Dickinson, D.</b>, et al. JWST Survey of the Supernova Remnant Cassiopeia A, In Prep.
+					4. Milisavljevic, D., Temim, T., De Looze, I., <b>Dickinson, D. A.</b>, et al. JWST Survey of the Supernova Remnant Cassiopeia A, In Prep.
 				</p>
 				<ul class="actions">
 					<li><a href="https://orcid.org/0000-0003-0913-4120" class="button">See All Publications</a></li>
@@ -37,7 +37,7 @@ show_tile: false
 	</section>
 	<section>
 		<a href="https://www.physics.purdue.edu/milisavljevic/" class="image">
-			<img src="{% link assets/images/PU-V-Full-Rev-RGB.png %}" alt="" data-position="center center" height = 300 width = auto />
+			<img src="{% link assets/images/PU-V-Full-Rev-RGB.png %}" alt="" data-position="center center" height = auto width = auto />
 		</a>
 		<div class="content">
 			<div class="inner">
