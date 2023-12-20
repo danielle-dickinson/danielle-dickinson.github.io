@@ -57,7 +57,8 @@ show_tile: true
 <p><span class="image left"><img src="{% link assets/images/card.png %}" alt="" /></span>I am presenting my iPoster entitled, "Impressive, eXtreme, Fleeting: Rapid Follow Up Echelle Spectra of CSM Interaction in SN 2023ixf. <a href="https://submissions.mirasmart.com/AAS243/Itinerary/PresentationDetail.aspx?evdid=2416">I will be presenting this on Tuesday January 9, 2024 at 5:30pm CT</a>. If you are interested in other SN 2023ixf content, there is a <a href="https://submissions.mirasmart.com/AAS243/Itinerary/EventDetail.aspx?evt=58">Special Session on Tuesday January 9, 2024 at 10-11:30 am CT</a>, where this past year's research on SN 2023ixf is presented.</p>
 <br>
 <br>
-<h2>Check out these other presenters!</h2>
+<br>
+<h2 id="content">Check out these other presenters!</h2>
 <p>Below are speakers from Purdue, JWST observations of Cas A, and other related SN science.</p>
 <div class="dropdown">
   <button class="dropbtn">Dropdown</button>
