@@ -96,7 +96,7 @@ show_tile: true
 <p>Below are speakers from Purdue, JWST observations of Cas A, and other related SN science.</p>
  <div class="navbar">
   <div class="dropdown">
-    <button class="dropbtn">Dropdown 
+    <button class="dropbtn">Presenters 
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-content">
@@ -108,9 +108,9 @@ show_tile: true
   </div>
   </div> 
 </div>
-	
+<br>
 <div class="row">
 	<div class="6u 12u$(small)">
-		<h3><a href="https://aas243-aas.ipostersessions.com/default.aspx?s=55-13-80-A6-A0-18-8D-F7-40-54-8C-47-4E-B9-5F-BA">iPoster</a></h3>
+		<h3><a href="https://aas243-aas.ipostersessions.com/default.aspx?s=55-13-80-A6-A0-18-8D-F7-40-54-8C-47-4E-B9-5F-BA">View my iPoster!</a></h3>
 		<p><embed src="https://aas243-aas.ipostersessions.com/Default.aspx?s=55-13-80-A6-A0-18-8D-F7-40-54-8C-47-4E-B9-5F-BA" style="width:1500px; height: 850px;"></p>
 	</div>
