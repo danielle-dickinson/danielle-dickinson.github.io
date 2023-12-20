@@ -66,6 +66,6 @@ show_tile: true
   </div>
 <div class="row">
 	<div class="6u 12u$(small)">
-		<h3><a href="https://aas243-aasA.ipostersessions.com/default.aspx?s=55-13-80-A6-A0-18-8D-F7-40-54-8C-47-4E-B9-5F-BA">iPoster</a></h3>
-		<p><embed src="https://aas243-aasA.ipostersessions.com/Default.aspx?s=55-13-80-A6-A0-18-8D-F7-40-54-8C-47-4E-B9-5F-BA" style="width:1500px; height: 1500;"></p>
+		<h3><a href="https://aas243-aas.ipostersessions.com/default.aspx?s=55-13-80-A6-A0-18-8D-F7-40-54-8C-47-4E-B9-5F-BA">iPoster</a></h3>
+		<p><embed src="https://aas243-aas.ipostersessions.com/Default.aspx?s=55-13-80-A6-A0-18-8D-F7-40-54-8C-47-4E-B9-5F-BA" style="width:1500px; height: 1500;"></p>
 	</div>
