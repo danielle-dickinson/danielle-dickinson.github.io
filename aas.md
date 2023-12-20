@@ -68,6 +68,7 @@ show_tile: true
 	  <a href="https://submissions.mirasmart.com/AAS243/Itinerary/PresentationDetail.aspx?evdid=2518">Danny Milisavljevic: JWST Observations of the Prototypical Supernova Remnant Cassiopeia A</a>
 	  <a href="https://submissions.mirasmart.com/AAS243/Itinerary/PresentationDetail.aspx?evdid=2319">Bhagya Subrayan: Scary Barbie: An Extremely Energetic, Long-Duration Tidal Disruption Event Candidate Without a Detected Host Galaxy at z = 0.995</a>
   </div>
+  <br>
 	
 <div class="row">
 	<div class="6u 12u$(small)">
