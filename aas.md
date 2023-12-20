@@ -16,7 +16,7 @@ show_tile: true
 .navbar a {
   float: left;
   display: block;
-  color: white;
+  color: #242943;
   text-align: center;
   padding: 14px 20px;
   text-decoration: none;
@@ -42,14 +42,14 @@ show_tile: true
 
 /* Add a red background color to navbar links on hover */
 .navbar a:hover, .dropdown:hover .dropbtn {
-  background-color: red;
+  background-color:  	#483D8B;
 }
 
 /* Dropdown content (hidden by default) */
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #f9f9f9;
+  background-color: #242943;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
