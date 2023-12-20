@@ -9,7 +9,7 @@ show_tile: true
 /* Style the navigation bar */
 .navbar {
   overflow: hidden;
-  background-color: #333;
+  background-color: #242943;
 }
 
 /* Navbar links */
@@ -49,7 +49,7 @@ show_tile: true
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #242943;
+  background-color: white;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
