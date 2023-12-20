@@ -88,7 +88,7 @@ show_tile: true
 
 <!-- Content -->
 <h2 id="content">Impressive, eXtreme, Fleeting (IXF... get it?)</h2>
-<p><span class="image left"><img src="{% link assets/images/card.png %}" alt="" /></span>I am presenting my iPoster entitled, "Impressive, eXtreme, Fleeting: Rapid Follow Up Echelle Spectra of CSM Interaction in SN 2023ixf. <a href="https://submissions.mirasmart.com/AAS243/Itinerary/PresentationDetail.aspx?evdid=2416">I will be presenting this on Tuesday January 9, 2024 at 5:30pm CT</a>. If you are interested in other SN 2023ixf content, there is a <a href="https://submissions.mirasmart.com/AAS243/Itinerary/EventDetail.aspx?evt=58">Special Session on Tuesday January 9, 2024 at 10-11:30 am CT</a>, where this past year's research on SN 2023ixf is presented.</p>
+<p><span class="image left"><img src="{% link assets/images/card.png %}" alt="" /></span>I am presenting my iPoster entitled, "Impressive, eXtreme, Fleeting: Rapid Follow Up Echelle Spectra of CSM Interaction in SN 2023ixf. <a href="https://submissions.mirasmart.com/AAS243/Itinerary/PresentationDetail.aspx?evdid=2416">I will be presenting this at an iPoster session on Tuesday January 9, 2024 at 5:30pm CT</a>. If you are interested in other SN 2023ixf content, there is a <a href="https://submissions.mirasmart.com/AAS243/Itinerary/EventDetail.aspx?evt=58">Special Session on Tuesday January 9, 2024 at 10-11:30 am CT</a>, where this past year's research on SN 2023ixf is presented.</p>
 <br>
 <br>
 <br>
