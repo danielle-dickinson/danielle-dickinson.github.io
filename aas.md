@@ -111,6 +111,6 @@ show_tile: true
 <br>
 <div class="row">
 	<div class="6u 12u$(small)">
-		<h3><a href="https://drive.google.com/file/d/1Fbnzf_Vs2NlrA7ADzVcxO6rAsH3g2APA/view?usp=sharing">View my iPoster!</a></h3>
-		<p><embed src="https://drive.google.com/file/d/1Fbnzf_Vs2NlrA7ADzVcxO6rAsH3g2APA/view?usp=sharing" style="width:1500px; height: 850px;"></p>
+		<h3><a href="https://aas243-aas.ipostersessions.com/Default.aspx?s=55-13-80-A6-A0-18-8D-F7-40-54-8C-47-4E-B9-5F-BA">View my iPoster!</a></h3>
+		<p><embed src="https://aas243-aas.ipostersessions.com/Default.aspx?s=55-13-80-A6-A0-18-8D-F7-40-54-8C-47-4E-B9-5F-BA" style="width:1500px; height: 850px;"></p>
 	</div>
