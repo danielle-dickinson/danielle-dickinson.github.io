@@ -37,6 +37,8 @@ show_tile: false
 				</p>
 				<ul class="actions">
 					<li><a href="https://orcid.org/0000-0003-0913-4120" class="button">See All Publications</a></li>
+     <ul class="actions">
+<li><a href="https://drive.google.com/file/d/1kF0uPiWVcYSA0O951wNmk7PGJoigynIW/view?usp=sharing" class="button">View My CV Here!</a></li></ul>
 				</ul>
 			</div>
 		</div>
