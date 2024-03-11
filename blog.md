@@ -2,7 +2,8 @@
 layout: page
 title: Blog
 landing-title: 'Blog'
-nav-menu: true
+nav-menu: false
+
 show_tile: false
 ---
 
