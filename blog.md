@@ -6,9 +6,6 @@ nav-menu: false
 show_tile: false
 ---
 
-<div class="header">
-  <h2>Blog Name</h2>
-</div>
 
 <div class="row">
   <div class="leftcolumn">
