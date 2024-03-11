@@ -21,10 +21,23 @@ show_tile: false
       <p>Some text..</p>
     </div>
   </div>
-<script type="text/javascript">
-  for (i<5) {
-  <p>This is paragraph 1.</p>
-  }
+    <!-- HTML elements to iterate -->
+    <p>This is paragraph 1.</p>
+    <p>This is paragraph 2.</p>
+    <p>This is paragraph 3.</p>
+ 
+    <script type="text/javascript">
+        // Get the elements to be iterated
+        let htmlElements =
+            document.getElementsByTagName("p");
+ 
+        // Use a regular for-loop
+        for (let i = 0; i < htmlElements.length; i++) {
+ 
+            // Print the current element
+            console.log(htmlElements[i]);
+        }
+    </script>
   
 </script>
 
