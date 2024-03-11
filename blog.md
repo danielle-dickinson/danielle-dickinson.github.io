@@ -5,7 +5,7 @@ landing-title: 'Blog'
 nav-menu: false
 show_tile: false
 ---
-
+<html>
 <script>
 function readfile() {
     alert(document.getElementById('iframe').contentDocument.body.firstChild.innerHTML);
@@ -30,5 +30,6 @@ function readfile() {
 
     <iframe id='iframe' src = '/blog/03112024.txt' onload='readfile()'> </iframe>
   </div>
-    
+</div>
+</html>
   
