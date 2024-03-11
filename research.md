@@ -23,11 +23,17 @@ show_tile: false
 				</header>
 				<p>1. <b>Dickinson, D. A.</b>, Smith, N., Andrews, J., et al., 2023. The Superluminous Type IIn Supernova ASASSN-15ua: Part of a continuum in extreme precursor mass loss, MNRAS, 527, 3 
 				<br>
+					
 					2. <b>Dickinson, D. A.</b>, Milisavlejvic, D., Garrettson, B., Dessart, L., et al. Intense, eXtreme, Fleeting: Rapid Follow Up Echelle Spectra of SN 2023ixf, In Prep.
 				<br>
+    
 					3. Subrayan, B. M., Milisavljevic, D., Chornock, R., et al. (incl. <b>Dickinson, D. A.</b>), 2023. Scary Barbie: An Extremely Energetic, Long-duration Tidal Disruption Event Candidate without a Detected Host Galaxy at z = 0.995, ApJL, 914, L9 
 				<br>
-					4. Milisavljevic, D., Temim, T., De Looze, I., <b>Dickinson, D. A.</b>, et al. JWST Survey of the Supernova Remnant Cassiopeia A, In Prep.
+    
+					4. Milisavljevic, D., Temim, T., De Looze, I., <b>Dickinson, D. A.</b>, et al. JWST Survey of the Supernova Remnant Cassiopeia A, Accepted.
+   				  <br>
+    
+					5. De Looze, I., Milisavljevic, D., Temim, T.,<b>Dickinson, D. A.</b>, et al. The Green Monster hiding in Cas A: JWST reveals a dense and dusty circumstellar structure pockmarked by ejecta interaction, Submitted.
 				</p>
 				<ul class="actions">
 					<li><a href="https://orcid.org/0000-0003-0913-4120" class="button">See All Publications</a></li>
