@@ -33,7 +33,7 @@ show_tile: false
 					4. Milisavljevic, D., Temim, T., De Looze, I., <b>Dickinson, D. A.</b>, et al. JWST Survey of the Supernova Remnant Cassiopeia A, Accepted.
    				  <br>
     
-					5. De Looze, I., Milisavljevic, D., Temim, T.,<b>Dickinson, D. A.</b>, et al. The Green Monster hiding in Cas A: JWST reveals a dense and dusty circumstellar structure pockmarked by ejecta interaction, Submitted.
+					5. De Looze, I., Milisavljevic, D., Temim, T.,<b>Dickinson, D. A.</b>, et al. The Green Monster hiding in front of Cas A: JWST reveals a dense and dusty circumstellar structure pockmarked by ejecta interaction, Submitted.
 				</p>
 				<ul class="actions">
 					<li><a href="https://orcid.org/0000-0003-0913-4120" class="button">See All Publications</a></li>
