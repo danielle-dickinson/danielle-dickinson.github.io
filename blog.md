@@ -38,7 +38,7 @@ show_tile: false
             console.log(htmlElements[i]);
         }
     </script>
-  
-</script>
+
+    </div>
 
   
