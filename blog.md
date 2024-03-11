@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: generic
 title: Blog
 landing-title: 'Blog'
 nav-menu: false
