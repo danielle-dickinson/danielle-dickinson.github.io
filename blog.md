@@ -21,8 +21,11 @@ show_tile: false
       <p>Some text..</p>
     </div>
   </div>
-
+<script type="text/javascript">
   for (i<5) {
   <p>This is paragraph 1.</p>
   }
+  
+</script>
+
   
