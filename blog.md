@@ -5,7 +5,8 @@ landing-title: 'Blog'
 nav-menu: false
 show_tile: false
 ---
-
+<!-- Main -->
+<div id="main" class="alt">
 
 <div class="row">
   <div class="leftcolumn">
