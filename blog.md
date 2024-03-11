@@ -1,6 +1,6 @@
 ---
 layout: page
-title: About Me
+title: Blog
 landing-title: 'Blog'
 nav-menu: true
 show_tile: false
