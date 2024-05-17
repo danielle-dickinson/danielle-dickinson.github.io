@@ -23,5 +23,5 @@ show_tile: false
 
 <p><span class="image right"><img src="{% link assets/images/IMG_7984.jpg %}" alt="" /></span>I love cooking and being outdoors. Namely, I enjoy rock climbing and stargazing, which often overlap due to the remoteness of the best climbing areas. I frequently travel to the Red River Gorge to climb and "hang" out! The picture to the right is one such adventure to "the Red."
 <ul class="actions">
-<li><a href="https://drive.google.com/file/d/1kF0uPiWVcYSA0O951wNmk7PGJoigynIW/view?usp=sharing" class="button">View My CV Here!</a></li></ul>
+<li><a href="https://drive.google.com/file/d/1mWaqgEp0fBixiIpn3sFlo_VlrclQB1wz/view?usp=sharing" class="button">View My CV Here!</a></li></ul>
 </p>
