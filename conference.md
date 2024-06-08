@@ -85,6 +85,9 @@ show_tile: true
 			<h1>Supernova Remnants III</h1>
 		</header>
 
+  <h2 id="content">High Resolution Mapping of the Unshocked Ejecta in Cassiopeia A</h2>
+<p><span class="image left"><img src="{% link assets/images/card.png %}" alt="" /></span>  </p>
+
 <!-- One -->
 <section id="one">
 	<div class="inner">
