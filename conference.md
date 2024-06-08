@@ -1,7 +1,7 @@
 ---
 layout: page
 title: SNR III
-image: assets/images/morgan-petroski-ZCX1Nyok66c-unsplash.jpg
+image: assets/images/images-4.jpg
 nav-menu: true
 show_tile: true
 ---
@@ -86,7 +86,7 @@ show_tile: true
 		</header>
 
   <h2 id="content">High Resolution Mapping of the Unshocked Ejecta in Cassiopeia A</h2>
-<p><span class="image left"><img src="{% link assets/images/card.png %}" alt="" /></span>  </p>
+<p><span class="image left"><img src="{% link assets/images/casa_ejecta.png %}" alt="" /></span>  </p>
 
 <!-- One -->
 <section id="one">
