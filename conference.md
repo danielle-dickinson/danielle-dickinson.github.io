@@ -86,7 +86,7 @@ show_tile: true
 		</header>
 
   <h2 id="content">High Resolution Mapping of the Unshocked Ejecta in Cassiopeia A</h2>
-<p><span class="image left"><img src="{% link assets/images/casa_ejecta.png %}" alt="" /></span>  </p>
+<p><span class="image left"><img src="{% link assets/images/casa_ejecta.png %}" alt="" /></span> I am presenting my work with JWST MRS/IFU spectra of Cassiopeia A's inner ejecta. You can find 3-Dimensional reconstructions of this work here: <a href="https://sketchfab.com/danielledickinson"> https://sketchfab.com/danielledickinson</a>. </p>
 
 <!-- One -->
 <section id="one">
