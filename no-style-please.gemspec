@@ -17,5 +17,5 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency "jekyll-seo-tag", "~> 2.8.0"
   spec.add_runtime_dependency "jektex", "~> 0.1.1"
 
-  spec.required_ruby_version = '>= 3.4'
+  spec.required_ruby_version = '>= 3.1'
 end
