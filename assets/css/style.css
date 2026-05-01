@@ -1002,9 +1002,9 @@ main {
 .project-item-icon-box ion-icon { --ionicon-stroke-width: 50px; }
 
 .project-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  width: 100% !important;
+  height: 300px !important;
+  object-fit: contain;
   transition: var(--transition-1);
 }
 
