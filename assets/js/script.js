@@ -15,12 +15,35 @@ const sidebarBtn = document.querySelector("[data-sidebar-btn]");
 sidebarBtn.addEventListener("click", function () { elementToggleFunc(sidebar); });
 
 
-
-// testimonials variables
-const testimonialsItem = document.querySelectorAll("[data-testimonials-item]");
+// UNIVERSAL MODAL SYSTEM
+const modalTriggers = document.querySelectorAll("[data-modal-trigger]");
 const modalContainer = document.querySelector("[data-modal-container]");
 const modalCloseBtn = document.querySelector("[data-modal-close-btn]");
 const overlay = document.querySelector("[data-overlay]");
+
+const modalImg = document.querySelector("[data-modal-img]");
+const modalTitle = document.querySelector("[data-modal-title]");
+const modalText = document.querySelector("[data-modal-text]");
+
+const toggleModal = () => {
+  modalContainer.classList.toggle("active");
+  overlay.classList.toggle("active");
+};
+
+// click any item (portfolio OR testimonials)
+modalTriggers.forEach(item => {
+  item.addEventListener("click", () => {
+    modalImg.src = item.dataset.modalImg;
+    modalTitle.innerHTML = item.dataset.modalTitle;
+    modalText.innerHTML = item.dataset.modalText;
+
+    toggleModal();
+  });
+});
+
+// close modal
+modalCloseBtn.addEventListener("click", toggleModal);
+overlay.addEventListener("click", toggleModal);
 
 // modal variable
 const modalImg = document.querySelector("[data-modal-img]");
