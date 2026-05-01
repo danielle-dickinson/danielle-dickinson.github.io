@@ -17,9 +17,12 @@ const elementToggleFunc = function (elem) {
 const sidebar = document.querySelector("[data-sidebar]");
 const sidebarBtn = document.querySelector("[data-sidebar-btn]");
 
-sidebarBtn.addEventListener("click", function () {
-  elementToggleFunc(sidebar);
-});
+
+if (sidebarBtn && sidebar) {
+  sidebarBtn.addEventListener("click", function () {
+    sidebar.classList.toggle("active");
+  });
+}
 
 
 
@@ -206,20 +209,20 @@ formInputs.forEach(input => {
 const navigationLinks = document.querySelectorAll("[data-nav-link]");
 const pages = document.querySelectorAll("[data-page]");
 
-navigationLinks.forEach((link, index) => {
+navigationLinks.forEach((link) => {
   link.addEventListener("click", function () {
 
+    const target = this.innerHTML.toLowerCase();
+
     pages.forEach(page => {
-      page.classList.remove("active");
+      page.classList.toggle("active", page.dataset.page === target);
     });
 
     navigationLinks.forEach(nav => {
       nav.classList.remove("active");
     });
 
-    pages[index].classList.add("active");
     this.classList.add("active");
-
     window.scrollTo(0, 0);
 
   });
