@@ -1200,6 +1200,18 @@ main {
   margin-bottom: 10px;
 }
 
+@media (max-width: 1024px) {
+  .project-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .project-list {
+    grid-template-columns: 1fr;
+  }
+}
+
 .project-item { display: none;
 			  overflow: hidden;}
 
