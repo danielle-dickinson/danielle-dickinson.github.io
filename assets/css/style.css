@@ -630,193 +630,6 @@ main {
 
 
 
-/**
- * #jwst dashboard 
- */
-/* =========================
-   JWST DASHBOARD WRAPPER
-========================= */
-
-.jwst-dashboard {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-}
-
-/* =========================
-   JWST PANEL LIST
-========================= */
-
-.jwst-panel-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-/* =========================
-   JWST PANEL CARD
-========================= */
-
-.jwst-panel {
-  display: flex;
-  gap: 28px;
-  padding: 24px;
-  width: 100%;
-
-  background: #1e1e1e;
-  border-radius: 16px;
-
-  cursor: pointer;
-  transition: 0.25s ease;
-
-  align-items: center;
-  border: 1px solid rgba(255, 255, 255, 0.06);
-}
-
-.jwst-panel:hover {
-  transform: translateY(-4px);
-  border-color: rgba(255, 255, 255, 0.15);
-}
-
-/* =========================
-   LEFT IMAGE (BIG SCIENCE IMAGE)
-========================= */
-
-.jwst-panel-image {
-  flex: 0 0 260px;
-}
-
-.jwst-panel-image img {
-  width: 100%;
-  height: auto;
-  border-radius: 12px;
-  object-fit: cover;
-  display: block;
-}
-
-/* =========================
-   TEXT AREA
-========================= */
-
-.jwst-panel-content {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.jwst-panel-content h4 {
-  font-size: 18px;
-  margin: 0;
-  color: #ffffff;
-}
-
-.jwst-panel-content p {
-  margin: 0;
-  color: rgba(255, 255, 255, 0.7);
-  line-height: 1.5;
-}
-
-/* hidden full text stays hidden on page */
-.jwst-fulltext {
-  display: none;
-}
-
-/* =========================
-   MODAL BACKDROP
-========================= */
-
-.modal-container {
-  position: fixed;
-  inset: 0;
-  display: none;
-  justify-content: center;
-  align-items: center;
-  z-index: 999;
-}
-
-.modal-container.active {
-  display: flex;
-}
-
-.overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.75);
-  backdrop-filter: blur(4px);
-}
-
-/* =========================
-   MODAL WINDOW
-========================= */
-
-.jwst-modal {
-  position: relative;
-  width: min(900px, 92vw);
-  max-height: 85vh;
-
-  background: #151515;
-  border-radius: 18px;
-
-  padding: 28px;
-  overflow-y: auto;
-
-  z-index: 2;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
-}
-
-/* close button */
-.modal-close-btn {
-  position: absolute;
-  top: 14px;
-  right: 14px;
-
-  background: transparent;
-  border: none;
-  font-size: 22px;
-  cursor: pointer;
-  color: white;
-}
-
-/* modal image */
-.modal-image img {
-  width: 100%;
-  border-radius: 12px;
-  margin-bottom: 16px;
-}
-
-/* modal title */
-.modal-title {
-  margin: 10px 0 14px;
-  font-size: 22px;
-  color: white;
-}
-
-/* modal text */
-.modal-text {
-  color: rgba(255, 255, 255, 0.8);
-  line-height: 1.6;
-}
-
-/* =========================
-   RESPONSIVE
-========================= */
-
-@media (max-width: 768px) {
-  .jwst-panel {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .jwst-panel-image {
-    width: 100%;
-    flex: unset;
-  }
-}
 
 /**
  * #testimonials 
@@ -869,22 +682,27 @@ main {
   overflow: hidden;
 }
 
-
 /* =========================
-   MODAL BACKDROP
+   GLOBAL MODAL SYSTEM (FIXED)
 ========================= */
+
 .modal-container {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.75);
+
   display: flex;
   justify-content: center;
   align-items: center;
+
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(6px);
+
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+
   transition: 0.25s ease;
-  z-index: 1000;
+  z-index: 9999;
 }
 
 .modal-container.active {
@@ -894,19 +712,25 @@ main {
 }
 
 /* =========================
-   MODAL BOX
+   MODAL BOX (UNIFIED LOOK)
 ========================= */
+
 .modal {
-  background: #fff;
-  width: min(700px, 92vw);
+  width: min(900px, 92vw);
   max-height: 85vh;
+
+  background: var(--eerie-black-2);
+  border: 1px solid var(--jet);
+  border-radius: 18px;
+
+  padding: 28px;
   overflow-y: auto;
-  border-radius: 16px;
-  padding: 24px;
-  position: relative;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-  transform: scale(0.9);
+
+  box-shadow: var(--shadow-5);
+  transform: scale(0.95);
   transition: 0.25s ease;
+
+  position: relative;
 }
 
 .modal-container.active .modal {
@@ -916,53 +740,64 @@ main {
 /* =========================
    CLOSE BUTTON
 ========================= */
+
 .modal-close-btn {
   position: absolute;
   top: 12px;
   right: 12px;
-  background: none;
+
+  background: transparent;
   border: none;
+
   font-size: 22px;
+  color: var(--white-1);
+
   cursor: pointer;
 }
 
 /* =========================
-   IMAGE
+   IMAGE AREA
 ========================= */
+
 .modal-img-wrapper {
-  width: 100%;
   display: flex;
   justify-content: center;
-  margin-bottom: 16px;
+  align-items: center;
+
+  margin-bottom: 18px;
 }
 
 .modal-img-wrapper img {
   max-width: 100%;
   max-height: 300px;
-  object-fit: contain;
-  border-radius: 10px;
+
+  border-radius: 12px;
 }
 
 /* =========================
    TEXT CONTENT
 ========================= */
+
 .modal-title {
-  margin-bottom: 10px;
+  font-size: var(--fs-3);
+  color: var(--white-2);
+  margin-bottom: 12px;
 }
 
 .modal-text {
-  font-size: 0.95rem;
+  color: var(--light-gray);
+  font-size: var(--fs-6);
   line-height: 1.6;
-  color: #333;
 }
 
-/* =========================
-   OVERLAY (if separate)
-========================= */
-[data-overlay] {
-  position: fixed;
-  inset: 0;
+/* optional: timestamp styling */
+.modal time {
+  color: var(--vegas-gold);
+  font-size: var(--fs-7);
+  display: block;
+  margin-bottom: 12px;
 }
+
 /**
  * #clients 
  */
