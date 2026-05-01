@@ -560,6 +560,65 @@ main {
 
 
 /**
+* #custom service box (d dickinson)
+*/
+.full-width-feature {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+
+  padding: 40px;
+  margin: 30px 0;
+
+  background: var(--eerie-black-2);
+  border: 1px solid var(--jet);
+  border-radius: 20px;
+
+  box-shadow: var(--shadow-2);
+}
+
+/* LEFT IMAGE */
+.full-width-feature .feature-image {
+  flex: 0 0 40%;
+}
+
+.full-width-feature .feature-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  object-fit: cover;
+}
+
+/* RIGHT CONTENT */
+.full-width-feature .feature-content {
+  flex: 1;
+}
+
+.full-width-feature .feature-title {
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+}
+
+.full-width-feature .feature-text {
+  color: var(--light-gray);
+  line-height: 1.6;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .full-width-feature {
+    flex-direction: column;
+    padding: 25px;
+  }
+
+  .full-width-feature .feature-image {
+    width: 100%;
+  }
+}
+
+
+/**
  * #testimonials 
  */
 
