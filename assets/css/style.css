@@ -617,6 +617,15 @@ main {
   }
 }
 
+	.full-width-feature::before {
+  content: "";
+  width: 4px;
+  height: 100%;
+  background: var(--orange-yellow-crayola);
+  border-radius: 4px;
+  margin-right: 20px;
+}
+
 
 /**
  * #testimonials 
