@@ -156,7 +156,7 @@ input, textarea {
 html { font-family: var(--ff-poppins); }
 
 body {
-  background: url("../education/background.png") center/cover no-repeat fixed !important;
+  background: url("../bkg.png") center/cover no-repeat fixed !important;
 }
 
 
