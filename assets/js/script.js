@@ -192,3 +192,39 @@ for (let i = 0; i < jwstItems.length; i++) {
 
 jwstModalCloseBtn.addEventListener("click", jwstModalFunc);
 jwstOverlay.addEventListener("click", jwstModalFunc);
+
+
+const modal = document.getElementById("portfolio-modal");
+const modalImg = document.getElementById("modal-img");
+const modalTitle = document.getElementById("modal-title");
+const modalCategory = document.getElementById("modal-category");
+
+const closeBtn = document.getElementById("modal-close");
+const overlay = document.getElementById("modal-overlay");
+
+// Select ALL portfolio items
+const items = document.querySelectorAll(".project-item");
+
+items.forEach(item => {
+  item.addEventListener("click", () => {
+
+    const img = item.querySelector("img").src;
+    const title = item.querySelector(".project-title").textContent;
+    const category = item.querySelector(".project-category").textContent;
+
+    modalImg.src = img;
+    modalTitle.textContent = title;
+    modalCategory.textContent = category;
+
+    modal.classList.add("active");
+  });
+});
+
+// Close handlers
+closeBtn.addEventListener("click", () => {
+  modal.classList.remove("active");
+});
+
+overlay.addEventListener("click", () => {
+  modal.classList.remove("active");
+});
