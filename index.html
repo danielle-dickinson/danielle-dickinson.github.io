@@ -269,13 +269,13 @@
 
   <ul class="testimonials-list has-scrollbar">
 
-    <li class="testimonials-item"
-        data-testimonials-item
-        data-title="Cassiopeia A"
-        data-image="casa_lg.jpg"
-        data-text="I study the youngest Galactic core-collapse supernova remnant, Cassiopeia A. I am writing a paper on the unshocked ejecta observed with JWST, focusing on composition, kinematics, and pre-supernova mass-loss structure.">
+    <li class="testimonials-item">
 
-      <div class="content-card">
+      <div class="content-card"
+           data-testimonials-item
+           data-title="Cassiopeia A"
+           data-image="casa_lg.jpg"
+           data-text="I study the youngest Galactic core-collapse supernova remnant, Cassiopeia A. I am writing a paper on JWST unshocked ejecta.">
 
         <figure class="testimonials-avatar-box">
           <img src="casa_lg.jpg" alt="Cassiopeia A" width="60">
@@ -297,29 +297,28 @@
 
   </ul>
 
-	<div class="modal-container" data-modal-container>
+  <!-- MODAL (KEEP ON PAGE, BUT OUTSIDE LIST ITEMS) -->
+  <div class="modal-container" data-modal-container>
 
-  <div class="overlay" data-overlay></div>
+    <div class="overlay" data-overlay></div>
 
-  <section class="modal">
+    <div class="modal">
 
-    <button class="modal-close-btn" data-modal-close-btn>
-      <ion-icon name="close-outline"></ion-icon>
-    </button>
+      <button class="modal-close-btn" data-modal-close-btn>×</button>
 
-    <div class="modal-img-wrapper">
-      <img src="" alt="" data-modal-img>
+      <div class="modal-img-wrapper">
+        <img data-modal-img />
+      </div>
+
+      <h3 class="modal-title" data-modal-title></h3>
+
+      <div class="modal-text" data-modal-text></div>
+
     </div>
 
-    <h4 class="h3 modal-title" data-modal-title></h4>
+  </div>
 
-    <div class="modal-text" data-modal-text></div>
-
-  </section>
-
-</div>
-
-</section>		  
+</section>
 
     
 
