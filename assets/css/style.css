@@ -543,7 +543,9 @@ main {
 
 .service-icon-box { margin-bottom: 10px; }
 
-.service-icon-box img { margin: auto; }
+.service-icon-box img { margin: auto;
+					  width: 80px;
+					  height: auto;}
 
 .service-content-box { text-align: center; }
 
@@ -1003,8 +1005,8 @@ main {
 .project-item-icon-box ion-icon { --ionicon-stroke-width: 50px; }
 
 .project-img img {
-  width: 100% !important;
-  height: 300px !important;
+  width: 300px !important;
+  height: auto !important;
   object-fit: contain;
   transition: var(--transition-1);
 }
