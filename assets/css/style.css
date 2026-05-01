@@ -631,70 +631,190 @@ main {
 /**
  * #jwst dashboard 
  */
-
+/* =========================
+   JWST DASHBOARD WRAPPER
+========================= */
 
 .jwst-dashboard {
   width: 100%;
-  margin: 40px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 
-/* HEADER */
-.jwst-dashboard-title {
-  font-size: 2rem;
-  margin-bottom: 20px;
+/* =========================
+   JWST PANEL LIST
+========================= */
+
+.jwst-panel-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
-/* GRID LAYOUT */
-.jwst-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 25px;
-}
+/* =========================
+   JWST PANEL CARD
+========================= */
 
-/* PANEL CARD */
 .jwst-panel {
-  background: var(--eerie-black-2);
-  border: 1px solid var(--jet);
-  border-radius: 18px;
-  overflow: hidden;
-  box-shadow: var(--shadow-2);
-  transition: 0.3s ease;
+  display: flex;
+  gap: 28px;
+  padding: 24px;
+  width: 100%;
+
+  background: #1e1e1e;
+  border-radius: 16px;
+
+  cursor: pointer;
+  transition: 0.25s ease;
+
+  align-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 .jwst-panel:hover {
   transform: translateY(-4px);
+  border-color: rgba(255, 255, 255, 0.15);
 }
 
-/* IMAGE AREA */
-.jwst-panel img {
+/* =========================
+   LEFT IMAGE (BIG SCIENCE IMAGE)
+========================= */
+
+.jwst-panel-image {
+  flex: 0 0 260px;
+}
+
+.jwst-panel-image img {
   width: 100%;
-  height: 220px;
+  height: auto;
+  border-radius: 12px;
   object-fit: cover;
+  display: block;
 }
 
-/* TEXT CONTENT */
+/* =========================
+   TEXT AREA
+========================= */
+
 .jwst-panel-content {
-  padding: 18px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
-.jwst-panel-title {
-  font-size: 1.2rem;
-  margin-bottom: 8px;
+.jwst-panel-content h4 {
+  font-size: 18px;
+  margin: 0;
+  color: #ffffff;
 }
 
-.jwst-panel-text {
-  color: var(--light-gray);
+.jwst-panel-content p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.5;
+}
+
+/* hidden full text stays hidden on page */
+.jwst-fulltext {
+  display: none;
+}
+
+/* =========================
+   MODAL BACKDROP
+========================= */
+
+.modal-container {
+  position: fixed;
+  inset: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal-container.active {
+  display: flex;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(4px);
+}
+
+/* =========================
+   MODAL WINDOW
+========================= */
+
+.jwst-modal {
+  position: relative;
+  width: min(900px, 92vw);
+  max-height: 85vh;
+
+  background: #151515;
+  border-radius: 18px;
+
+  padding: 28px;
+  overflow-y: auto;
+
+  z-index: 2;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+}
+
+/* close button */
+.modal-close-btn {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+
+  background: transparent;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+  color: white;
+}
+
+/* modal image */
+.modal-image img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 16px;
+}
+
+/* modal title */
+.modal-title {
+  margin: 10px 0 14px;
+  font-size: 22px;
+  color: white;
+}
+
+/* modal text */
+.modal-text {
+  color: rgba(255, 255, 255, 0.8);
   line-height: 1.6;
-  font-size: 0.95rem;
 }
 
-/* RESPONSIVE */
-@media (max-width: 900px) {
-  .jwst-grid {
-    grid-template-columns: 1fr;
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+  .jwst-panel {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .jwst-panel-image {
+    width: 100%;
+    flex: unset;
   }
 }
-
 
 /**
  * #testimonials 
