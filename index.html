@@ -313,7 +313,10 @@
 
   <div class="overlay" data-overlay></div>
 
-  <section class="testimonials-modal">
+  <!-- =========================
+       TESTIMONIAL MODAL VIEW
+  ========================== -->
+  <section class="modal-view modal-testimonials" data-modal-view="testimonials">
 
     <button class="modal-close-btn" data-modal-close-btn>
       <ion-icon name="close-outline"></ion-icon>
@@ -331,9 +334,34 @@
 
       <h4 class="h3 modal-title" data-modal-title></h4>
 
-      <time datetime="2026-06-14">14 June, 2026</time>
+      <time datetime="">14 June, 2026</time>
 
       <div data-modal-text></div>
+
+    </div>
+
+  </section>
+
+  <!-- =========================
+       PORTFOLIO MODAL VIEW
+  ========================== -->
+  <section class="modal-view modal-portfolio" data-modal-view="portfolio">
+
+    <button class="modal-close-btn" data-modal-close-btn>
+      <ion-icon name="close-outline"></ion-icon>
+    </button>
+
+    <figure class="modal-portfolio-image">
+      <img src="" alt="" data-modal-project-img>
+    </figure>
+
+    <div class="modal-content">
+
+      <h4 class="h3 modal-title" data-modal-project-title></h4>
+
+      <p class="modal-category" data-modal-project-category></p>
+
+      <div class="modal-text" data-modal-project-text></div>
 
     </div>
 
