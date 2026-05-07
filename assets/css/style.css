@@ -768,7 +768,7 @@ main {
 }
 
 .modal-img-wrapper img {
-  max-width: 100%;
+  max-width: auto;
   height: 50vh;
 
   border-radius: 12px;
