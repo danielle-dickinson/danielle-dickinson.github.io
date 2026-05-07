@@ -683,137 +683,123 @@
 
 <section class="jwst-dashboard">
 
-  <h3 class="h3">JWST Results Dashboard</h3>
+  <h3 class="h3 service-title">JWST Dashboard</h3>
 
-  <ul class="jwst-panel-list">
+  <ul class="project-list">
 
-    <!-- PANEL 1 -->
-    <li>
-      <div class="content-card jwst-panel" data-jwst-item>
+    <!-- CARD 1 -->
+    <li
+      class="project-item active"
+      data-filter-item
+      data-category="jwst"
+      data-jwst-item
+      data-title="Cassiopeia A Observations"
+      data-image="./assets/images/casa-jwst.jpg"
+      data-text="
+        <p>
+          Deep JWST NIRSpec observations of Cassiopeia A reveal detailed
+          filamentary structure within the quasi-stationary flocculi.
+        </p>
 
-        <figure class="jwst-panel-image">
-          <img src="./assets/jwst/image1.jpg" alt="JWST Panel 1" data-jwst-image>
+        <p>
+          This project focuses on ejecta chemistry, shock interactions,
+          and dust evolution in the remnant environment.
+        </p>
+
+        <p>
+          Instruments used:
+          <br>
+          • NIRSpec IFU
+          <br>
+          • MIRI imaging
+        </p>
+      "
+    >
+
+      <a href="#">
+
+        <figure class="project-img">
+
+          <div class="project-item-icon-box">
+            <ion-icon name="expand-outline"></ion-icon>
+          </div>
+
+          <img
+            src="./assets/images/casa-jwst-thumb.jpg"
+            alt="Cassiopeia A"
+            loading="lazy"
+          >
+
         </figure>
 
-        <div class="jwst-panel-content">
-          <h4 data-jwst-title>Title 1</h4>
+        <h3 class="project-title">
+          Cassiopeia A
+        </h3>
 
-          <p data-jwst-summary>
-            Text 1: short summary of JWST result.
-          </p>
+        <p class="project-category">
+          JWST / Supernova Remnants
+        </p>
 
-          <div class="jwst-fulltext" data-jwst-fulltext>
-            Fulltext 1: extended scientific description, analysis, interpretation, and results.
-          </div>
-        </div>
+      </a>
 
-      </div>
     </li>
 
 
-    <!-- PANEL 2 -->
-    <li>
-      <div class="content-card jwst-panel" data-jwst-item>
 
-        <figure class="jwst-panel-image">
-          <img src="./assets/jwst/image2.jpg" alt="JWST Panel 2" data-jwst-image>
+    <!-- CARD 2 -->
+    <li
+      class="project-item active"
+      data-filter-item
+      data-category="jwst"
+      data-jwst-item
+      data-title="Dust Formation Analysis"
+      data-image="./assets/images/dust-formation.jpg"
+      data-text="
+        <p>
+          Investigating dust condensation pathways in core-collapse
+          supernova environments using JWST spectroscopy.
+        </p>
+
+        <p>
+          Preliminary analysis indicates strong silicate and sulfur-rich
+          emission components in shocked ejecta knots.
+        </p>
+      "
+    >
+
+      <a href="#">
+
+        <figure class="project-img">
+
+          <div class="project-item-icon-box">
+            <ion-icon name="expand-outline"></ion-icon>
+          </div>
+
+          <img
+            src="./assets/images/dust-thumb.jpg"
+            alt="Dust Formation"
+            loading="lazy"
+          >
+
         </figure>
 
-        <div class="jwst-panel-content">
-          <h4 data-jwst-title>Title 2</h4>
+        <h3 class="project-title">
+          Dust Formation
+        </h3>
 
-          <p data-jwst-summary>
-            Text 2: short summary of JWST result.
-          </p>
+        <p class="project-category">
+          Spectroscopy
+        </p>
 
-          <div class="jwst-fulltext" data-jwst-fulltext>
-            Fulltext 2: extended scientific description, analysis, interpretation, and results.
-          </div>
-        </div>
+      </a>
 
-      </div>
-    </li>
-
-
-    <!-- PANEL 3 -->
-    <li>
-      <div class="content-card jwst-panel" data-jwst-item>
-
-        <figure class="jwst-panel-image">
-          <img src="./assets/jwst/image3.jpg" alt="JWST Panel 3" data-jwst-image>
-        </figure>
-
-        <div class="jwst-panel-content">
-          <h4 data-jwst-title>Title 3</h4>
-
-          <p data-jwst-summary>
-            Text 3: short summary of JWST result.
-          </p>
-
-          <div class="jwst-fulltext" data-jwst-fulltext>
-            Fulltext 3: extended scientific description, analysis, interpretation, and results.
-          </div>
-        </div>
-
-      </div>
-    </li>
-
-
-    <!-- PANEL 4 -->
-    <li>
-      <div class="content-card jwst-panel" data-jwst-item>
-
-        <figure class="jwst-panel-image">
-          <img src="./assets/jwst/image4.jpg" alt="JWST Panel 4" data-jwst-image>
-        </figure>
-
-        <div class="jwst-panel-content">
-          <h4 data-jwst-title>Title 4</h4>
-
-          <p data-jwst-summary>
-            Text 4: short summary of JWST result.
-          </p>
-
-          <div class="jwst-fulltext" data-jwst-fulltext>
-            Fulltext 4: extended scientific description, analysis, interpretation, and results.
-          </div>
-        </div>
-
-      </div>
     </li>
 
   </ul>
+
 </section>
 
 
-
-<!-- =========================
-     JWST MODAL (CLICK POPUP)
-========================= -->
-
-<div class="modal-container" data-jwst-modal-container>
-
-  <div class="overlay" data-overlay></div>
-
-  <section class="jwst-modal">
-
-    <button class="modal-close-btn" data-jwst-modal-close-btn>
-      <ion-icon name="close-outline"></ion-icon>
-    </button>
-
-    <div class="modal-image">
-      <img src="" alt="" data-jwst-modal-img>
-    </div>
-
-    <h4 class="modal-title" data-jwst-modal-title>Title</h4>
-
-    <div class="modal-text" data-jwst-modal-text>
-      Full text goes here
-    </div>
-
-  </section>
-
-</div>
 
 	<section class="full-width-feature">
 
