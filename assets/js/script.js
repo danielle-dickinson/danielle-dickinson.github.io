@@ -28,42 +28,71 @@ if (sidebarBtn && sidebar) {
 
 // =========================
 // UNIFIED MODAL SYSTEM
-// (USED FOR EVERYTHING)
 // =========================
 
-// modal elements
 const modalContainer = document.querySelector("[data-modal-container]");
 const modalCloseBtn = document.querySelector("[data-modal-close-btn]");
 const overlay = document.querySelector("[data-overlay]");
+const modal = document.querySelector("[data-modal]");
 
 const modalImg = document.querySelector("[data-modal-img]");
-const modalTitle = document.querySelector("[data-modal-title]");
-const modalText = document.querySelector("[data-modal-text]");
+const modalTitle = document.querySelectorAll("[data-modal-title]");
+const modalSubtitle = document.querySelector("[data-modal-subtitle]");
+const modalText = document.querySelectorAll("[data-modal-text]");
 
-// open modal function
-function openModal(type, title, image, text) {
+function openModal(type, { title, subtitle, image, text }) {
 
+  // remove old type classes
   modal.classList.remove("image-modal", "info-modal");
   modal.classList.add(type + "-modal");
 
-  modalTitle.innerHTML = title || "";
-  modalText.innerHTML = text || "";
+  // populate shared fields
+  modalTitle.forEach(el => el.innerHTML = title || "");
+  modalText.forEach(el => el.innerHTML = text || "");
 
-  if (type === "image") {
+  if (modalSubtitle) {
+    modalSubtitle.innerHTML = subtitle || "";
+  }
+
+  if (image && modalImg) {
     modalImg.src = image;
+    modalImg.alt = title || "";
   }
 
   modalContainer.classList.add("active");
+  overlay.classList.add("active");
 }
 
-// close modal function
 function closeModal() {
   modalContainer.classList.remove("active");
   overlay.classList.remove("active");
 }
 
+modalCloseBtn.addEventListener("click", closeModal);
+overlay.addEventListener("click", closeModal);
+
+// close on Escape key
+document.addEventListener("keydown", function (e) {
+  if (e.key === "Escape") closeModal();
+});
 
 
+// =========================
+// ATTACH MODAL TRIGGERS
+// (works for portfolio, jwst, testimonials — anything with data-modal-trigger)
+// =========================
+
+document.querySelectorAll("[data-modal-trigger]").forEach(card => {
+  card.addEventListener("click", function () {
+    const type  = this.dataset.modalType;   // "image" or "info"
+    const title = this.dataset.title;
+    const subtitle = this.dataset.subtitle;
+    const image = this.dataset.image;
+    const text  = this.dataset.text;
+
+    openModal(type, { title, subtitle, image, text });
+  });
+});
 // =========================
 // TESTIMONIALS
 // =========================
