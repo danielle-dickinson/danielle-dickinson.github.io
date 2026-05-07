@@ -1124,26 +1124,30 @@
 ========================= -->
 
 <div class="modal-container" data-modal-container>
-
   <div class="overlay" data-overlay></div>
 
   <section class="modal" data-modal>
-
     <button class="modal-close-btn" data-modal-close-btn>
       <ion-icon name="close-outline"></ion-icon>
     </button>
 
-    <!-- IMAGE MODE -->
+    <!-- IMAGE MODE: image + caption below -->
     <div class="modal-img-wrapper">
       <img src="" alt="" data-modal-img>
     </div>
+    <div class="modal-caption">
+      <h3 class="modal-title" data-modal-title></h3>
+      <div class="modal-text" data-modal-text></div>
+    </div>
 
-    <!-- INFO MODE -->
-    <h3 class="modal-title" data-modal-title></h3>
-    <div class="modal-text" data-modal-text></div>
+    <!-- INFO MODE: sidebar image + scrollable body -->
+    <div class="modal-body">
+      <h3 class="modal-title" data-modal-title></h3>
+      <p class="modal-subtitle" data-modal-subtitle></p>
+      <div class="modal-text" data-modal-text></div>
+    </div>
 
   </section>
-
 </div>
 	
   <!--
