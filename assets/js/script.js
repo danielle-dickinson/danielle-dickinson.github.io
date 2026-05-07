@@ -41,14 +41,19 @@ const modalTitle = document.querySelector("[data-modal-title]");
 const modalText = document.querySelector("[data-modal-text]");
 
 // open modal function
-function openModal(title, image, text) {
-  modalImg.src = image;
-  modalImg.alt = title;
-  modalTitle.innerHTML = title;
-  modalText.innerHTML = text;
+function openModal(type, title, image, text) {
+
+  modal.classList.remove("image-modal", "info-modal");
+  modal.classList.add(type + "-modal");
+
+  modalTitle.innerHTML = title || "";
+  modalText.innerHTML = text || "";
+
+  if (type === "image") {
+    modalImg.src = image;
+  }
 
   modalContainer.classList.add("active");
-  overlay.classList.add("active");
 }
 
 // close modal function
