@@ -762,6 +762,12 @@ main {
   background: hsla(0, 0%, 0%, 0.7);
 }
 
+/* default: hide both until a type class is added */
+.modal .modal-caption,
+.modal .modal-body {
+  display: none;
+}
+
 
 /* =========================
    IMAGE MODAL
@@ -770,8 +776,8 @@ main {
 ========================= */
 
 .modal.image-modal {
-  width: 90vw;
-  height: 90vh;
+  width: 100vw;
+  height: 100vh;
   max-width: 100vw;
   max-height: 100vh;
   border-radius: 0;
@@ -891,12 +897,6 @@ main {
   font-size: var(--fs-6);
   color: var(--light-gray);
   line-height: 1.7;
-}
-
-/* default: hide both until a type class is added */
-.modal .modal-caption,
-.modal .modal-body {
-  display: none;
 }
 
 
