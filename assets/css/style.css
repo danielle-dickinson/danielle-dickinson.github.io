@@ -769,7 +769,7 @@ main {
 
 .modal-img-wrapper img {
   max-width: auto;
-  height: 50vh;
+  height: 1000px;
 
   border-radius: 12px;
 }
