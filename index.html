@@ -297,26 +297,7 @@
 
   </ul>
 
-  <!-- MODAL (KEEP ON PAGE, BUT OUTSIDE LIST ITEMS) -->
-  <div class="modal-container" data-modal-container>
 
-    <div class="overlay" data-overlay></div>
-
-    <div class="modal">
-
-      <button class="modal-close-btn" data-modal-close-btn>×</button>
-
-      <div class="modal-img-wrapper">
-        <img data-modal-img />
-      </div>
-
-      <h3 class="modal-title" data-modal-title></h3>
-
-      <div class="modal-text" data-modal-text></div>
-
-    </div>
-
-  </div>
 
 </section>
 
@@ -681,9 +662,13 @@
      JWST DASHBOARD SECTION
 ========================= -->
 
-<section class="jwst-dashboard">
+<!-- =========================
+     JWST DASHBOARD SECTION
+========================= -->
 
-  <h3 class="h3 service-title">JWST Dashboard</h3>
+<section class="projects">
+
+  <h2 class="h2 article-title">JWST Dashboard</h2>
 
   <ul class="project-list">
 
@@ -695,52 +680,30 @@
       data-jwst-item
       data-title="Cassiopeia A Observations"
       data-image="./assets/images/casa-jwst.jpg"
-      data-text="
-        <p>
-          Deep JWST NIRSpec observations of Cassiopeia A reveal detailed
-          filamentary structure within the quasi-stationary flocculi.
-        </p>
-
-        <p>
-          This project focuses on ejecta chemistry, shock interactions,
-          and dust evolution in the remnant environment.
-        </p>
-
-        <p>
-          Instruments used:
-          <br>
-          • NIRSpec IFU
-          <br>
-          • MIRI imaging
-        </p>
-      "
+      data-text='Deep JWST NIRSpec observations of Cassiopeia A reveal detailed filamentary structure within the quasi-stationary flocculi. This project investigates ejecta chemistry, shock interactions, and dust evolution in the remnant environment.'
     >
 
-      <a href="#">
+      <div class="project-img">
 
-        <figure class="project-img">
+        <div class="project-item-icon-box">
+          <ion-icon name="expand-outline"></ion-icon>
+        </div>
 
-          <div class="project-item-icon-box">
-            <ion-icon name="expand-outline"></ion-icon>
-          </div>
+        <img
+          src="./assets/images/casa-thumb.jpg"
+          alt="Cassiopeia A"
+          loading="lazy"
+        >
 
-          <img
-            src="./assets/images/casa-jwst-thumb.jpg"
-            alt="Cassiopeia A"
-            loading="lazy"
-          >
+      </div>
 
-        </figure>
+      <h3 class="project-title">
+        Cassiopeia A
+      </h3>
 
-        <h3 class="project-title">
-          Cassiopeia A
-        </h3>
-
-        <p class="project-category">
-          JWST / Supernova Remnants
-        </p>
-
-      </a>
+      <p class="project-category">
+        Supernova Remnant
+      </p>
 
     </li>
 
@@ -753,45 +716,31 @@
       data-category="jwst"
       data-jwst-item
       data-title="Dust Formation Analysis"
-      data-image="./assets/images/dust-formation.jpg"
-      data-text="
-        <p>
-          Investigating dust condensation pathways in core-collapse
-          supernova environments using JWST spectroscopy.
-        </p>
-
-        <p>
-          Preliminary analysis indicates strong silicate and sulfur-rich
-          emission components in shocked ejecta knots.
-        </p>
-      "
+      data-image="./assets/images/dust.jpg"
+      data-text='Investigating dust condensation pathways in core-collapse supernovae using JWST spectroscopy. Early results show strong silicate and sulfur-rich emission components in shocked ejecta knots.'
     >
 
-      <a href="#">
+      <div class="project-img">
 
-        <figure class="project-img">
+        <div class="project-item-icon-box">
+          <ion-icon name="expand-outline"></ion-icon>
+        </div>
 
-          <div class="project-item-icon-box">
-            <ion-icon name="expand-outline"></ion-icon>
-          </div>
+        <img
+          src="./assets/images/dust-thumb.jpg"
+          alt="Dust Formation"
+          loading="lazy"
+        >
 
-          <img
-            src="./assets/images/dust-thumb.jpg"
-            alt="Dust Formation"
-            loading="lazy"
-          >
+      </div>
 
-        </figure>
+      <h3 class="project-title">
+        Dust Formation
+      </h3>
 
-        <h3 class="project-title">
-          Dust Formation
-        </h3>
-
-        <p class="project-category">
-          Spectroscopy
-        </p>
-
-      </a>
+      <p class="project-category">
+        Spectroscopy
+      </p>
 
     </li>
 
@@ -1812,7 +1761,31 @@
 
 
 
+<!-- =========================
+     GLOBAL MODAL
+========================= -->
 
+<div class="modal-container" data-modal-container>
+
+  <div class="overlay" data-overlay></div>
+
+  <section class="modal">
+
+    <button class="modal-close-btn" data-modal-close-btn>
+      <ion-icon name="close-outline"></ion-icon>
+    </button>
+
+    <div class="modal-img-wrapper">
+      <img src="" alt="" data-modal-img>
+    </div>
+
+    <h3 class="modal-title" data-modal-title></h3>
+
+    <div class="modal-text" data-modal-text></div>
+
+  </section>
+
+</div>
 
   <!--
     - custom js link
