@@ -17,7 +17,6 @@ const elementToggleFunc = function (elem) {
 const sidebar = document.querySelector("[data-sidebar]");
 const sidebarBtn = document.querySelector("[data-sidebar-btn]");
 
-
 if (sidebarBtn && sidebar) {
   sidebarBtn.addEventListener("click", function () {
     sidebar.classList.toggle("active");
@@ -42,11 +41,9 @@ const modalText = document.querySelectorAll("[data-modal-text]");
 
 function openModal(type, { title, subtitle, image, text }) {
 
-  // remove old type classes
   modal.classList.remove("image-modal", "info-modal");
   modal.classList.add(type + "-modal");
 
-  // populate shared fields
   modalTitle.forEach(el => el.innerHTML = title || "");
   modalText.forEach(el => el.innerHTML = text || "");
 
@@ -68,91 +65,29 @@ function closeModal() {
   overlay.classList.remove("active");
 }
 
-modalCloseBtn.addEventListener("click", closeModal);
-overlay.addEventListener("click", closeModal);
+if (modalCloseBtn) {
+  modalCloseBtn.addEventListener("click", closeModal);
+}
 
-// close on Escape key
+if (overlay) {
+  overlay.addEventListener("click", closeModal);
+}
+
 document.addEventListener("keydown", function (e) {
   if (e.key === "Escape") closeModal();
 });
 
-
-// =========================
-// ATTACH MODAL TRIGGERS
-// (works for portfolio, jwst, testimonials — anything with data-modal-trigger)
-// =========================
-
 document.querySelectorAll("[data-modal-trigger]").forEach(card => {
   card.addEventListener("click", function () {
-    const type  = this.dataset.modalType;   // "image" or "info"
-    const title = this.dataset.title;
+    const type     = this.dataset.modalType;
+    const title    = this.dataset.title;
     const subtitle = this.dataset.subtitle;
-    const image = this.dataset.image;
-    const text  = this.dataset.text;
+    const image    = this.dataset.image;
+    const text     = this.dataset.text;
 
     openModal(type, { title, subtitle, image, text });
   });
 });
-// =========================
-// TESTIMONIALS
-// =========================
-const testimonialsItems = document.querySelectorAll("[data-testimonials-item]");
-
-testimonialsItems.forEach(item => {
-  item.addEventListener("click", function () {
-
-    const title = this.dataset.title;
-    const image = this.dataset.image;
-    const text = this.dataset.text;
-
-    openModal(title, image, text);
-
-  });
-});
-
-
-
-// =========================
-// PORTFOLIO (PROJECTS)
-// =========================
-const projectItems = document.querySelectorAll("[data-project-item]");
-
-projectItems.forEach(item => {
-  item.addEventListener("click", function () {
-
-    const title = this.dataset.title;
-    const image = this.dataset.image;
-    const text = this.dataset.text;
-
-    openModal(title, image, text);
-
-  });
-});
-
-
-
-// =========================
-// JWST (NOW ALSO USES SAME SYSTEM)
-// =========================
-const jwstItems = document.querySelectorAll("[data-jwst-item]");
-
-jwstItems.forEach(item => {
-  item.addEventListener("click", function () {
-
-    const title = this.dataset.title;
-    const image = this.dataset.image;
-    const text = this.dataset.text;
-
-    openModal(title, image, text);
-
-  });
-});
-
-
-
-// modal close events
-modalCloseBtn.addEventListener("click", closeModal);
-overlay.addEventListener("click", closeModal);
 
 
 
@@ -164,16 +99,10 @@ const selectItems = document.querySelectorAll("[data-select-item]");
 const selectValue = document.querySelector("[data-select-value]");
 const filterBtn = document.querySelectorAll("[data-filter-btn]");
 
-select.addEventListener("click", function () {
-  elementToggleFunc(this);
-});
-
 const filterItems = document.querySelectorAll("[data-filter-item]");
 
 function filterFunc(selectedValue) {
-
   filterItems.forEach(item => {
-
     if (selectedValue === "all") {
       item.classList.add("active");
     } else if (selectedValue === item.dataset.category) {
@@ -181,38 +110,45 @@ function filterFunc(selectedValue) {
     } else {
       item.classList.remove("active");
     }
-
   });
 }
 
-selectItems.forEach(item => {
-  item.addEventListener("click", function () {
-
-    const selectedValue = this.innerText.toLowerCase();
-    selectValue.innerText = this.innerText;
-
-    elementToggleFunc(select);
-    filterFunc(selectedValue);
-
+if (select) {
+  select.addEventListener("click", function () {
+    elementToggleFunc(this);
   });
-});
+}
 
-let lastClickedBtn = filterBtn[0];
+if (selectItems.length > 0) {
+  selectItems.forEach(item => {
+    item.addEventListener("click", function () {
+      const selectedValue = this.innerText.toLowerCase();
 
-filterBtn.forEach(btn => {
-  btn.addEventListener("click", function () {
+      if (selectValue) selectValue.innerText = this.innerText;
 
-    const selectedValue = this.innerText.toLowerCase();
-    selectValue.innerText = this.innerText;
-
-    filterFunc(selectedValue);
-
-    lastClickedBtn.classList.remove("active");
-    this.classList.add("active");
-    lastClickedBtn = this;
-
+      elementToggleFunc(select);
+      filterFunc(selectedValue);
+    });
   });
-});
+}
+
+if (filterBtn.length > 0) {
+  let lastClickedBtn = filterBtn[0];
+
+  filterBtn.forEach(btn => {
+    btn.addEventListener("click", function () {
+      const selectedValue = this.innerText.toLowerCase();
+
+      if (selectValue) selectValue.innerText = this.innerText;
+
+      filterFunc(selectedValue);
+
+      lastClickedBtn.classList.remove("active");
+      this.classList.add("active");
+      lastClickedBtn = this;
+    });
+  });
+}
 
 
 
@@ -223,17 +159,17 @@ const form = document.querySelector("[data-form]");
 const formInputs = document.querySelectorAll("[data-form-input]");
 const formBtn = document.querySelector("[data-form-btn]");
 
-formInputs.forEach(input => {
-  input.addEventListener("input", function () {
-
-    if (form.checkValidity()) {
-      formBtn.removeAttribute("disabled");
-    } else {
-      formBtn.setAttribute("disabled", "");
-    }
-
+if (form && formBtn) {
+  formInputs.forEach(input => {
+    input.addEventListener("input", function () {
+      if (form.checkValidity()) {
+        formBtn.removeAttribute("disabled");
+      } else {
+        formBtn.setAttribute("disabled", "");
+      }
+    });
   });
-});
+}
 
 
 
@@ -243,21 +179,23 @@ formInputs.forEach(input => {
 const navigationLinks = document.querySelectorAll("[data-nav-link]");
 const pages = document.querySelectorAll("[data-page]");
 
-navigationLinks.forEach((link) => {
-  link.addEventListener("click", function () {
+if (navigationLinks.length > 0) {
+  navigationLinks.forEach((link) => {
+    link.addEventListener("click", function () {
 
-    const target = this.innerHTML.toLowerCase();
+      const target = this.innerHTML.toLowerCase();
 
-    pages.forEach(page => {
-      page.classList.toggle("active", page.dataset.page === target);
+      pages.forEach(page => {
+        page.classList.toggle("active", page.dataset.page === target);
+      });
+
+      navigationLinks.forEach(nav => {
+        nav.classList.remove("active");
+      });
+
+      this.classList.add("active");
+      window.scrollTo(0, 0);
+
     });
-
-    navigationLinks.forEach(nav => {
-      nav.classList.remove("active");
-    });
-
-    this.classList.add("active");
-    window.scrollTo(0, 0);
-
   });
-});
+}
