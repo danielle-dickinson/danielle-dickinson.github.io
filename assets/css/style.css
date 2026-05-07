@@ -682,7 +682,6 @@ main {
   overflow: hidden;
 }
 
-  
 /* =========================
    MODAL OVERLAY
 ========================= */
@@ -695,8 +694,8 @@ main {
   justify-content: center;
   align-items: center;
 
-  background: rgba(0, 0, 0, 0.8);
-  backdrop-filter: blur(6px);
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(8px);
 
   opacity: 0;
   visibility: hidden;
@@ -711,6 +710,7 @@ main {
   visibility: visible;
   pointer-events: all;
 }
+
 
 /* =========================
    BASE MODAL BOX
@@ -734,85 +734,274 @@ main {
   transform: scale(1);
 }
 
+
 /* =========================
    CLOSE BUTTON
 ========================= */
 
 .modal-close-btn {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 12px;
+  right: 12px;
 
-  background: transparent;
+  background: hsla(0, 0%, 0%, 0.4);
   border: none;
+  border-radius: 8px;
 
-  font-size: 22px;
+  font-size: 20px;
   color: var(--white-1);
+  padding: 4px 6px;
 
   cursor: pointer;
   z-index: 10;
+
+  transition: background var(--transition-1);
 }
 
+.modal-close-btn:hover {
+  background: hsla(0, 0%, 0%, 0.7);
+}
+
+
 /* =========================
-   IMAGE MODAL (FULLSCREEN)
+   IMAGE MODAL
+   - fullscreen, image dominant
+   - title + text shown BELOW image
 ========================= */
 
 .modal.image-modal {
-  width: 95vw;
-  height: 95vh;
+  width: 92vw;
+  max-width: 1100px;
+  max-height: 92vh;
+
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 }
 
 .modal.image-modal .modal-img-wrapper {
-  width: 100%;
-  height: 100%;
+  flex: 1;
+  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
+  background: black;
+  min-height: 0;
 }
 
-.modal.image-modal img {
+.modal.image-modal .modal-img-wrapper img {
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
   display: block;
 }
 
-/* hide text in image mode */
-.modal.image-modal .modal-text,
-.modal.image-modal .modal-title {
-  display: none;
+.modal.image-modal .modal-caption {
+  padding: 16px 24px;
+  border-top: 1px solid var(--jet);
+  background: var(--eerie-black-2);
+  flex-shrink: 0;
 }
 
+.modal.image-modal .modal-title {
+  font-size: var(--fs-4);
+  color: var(--white-2);
+  margin-bottom: 4px;
+}
+
+.modal.image-modal .modal-text {
+  font-size: var(--fs-7);
+  color: var(--light-gray);
+  line-height: 1.5;
+}
+
+
 /* =========================
-   INFO MODAL (TEXT FOCUSED)
+   INFO MODAL
+   - smaller image on left
+   - bulk text on right
 ========================= */
 
 .modal.info-modal {
-  width: min(720px, 92vw);
-  max-height: 85vh;
+  width: min(760px, 92vw);
+  max-height: 88vh;
 
-  padding: 24px;
-  overflow-y: auto;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
 }
 
-/* optional image in info mode */
 .modal.info-modal .modal-img-wrapper {
+  flex: 0 0 220px;
+  background: var(--onyx);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 24px 16px;
+}
+
+.modal.info-modal .modal-img-wrapper img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+/* hide image area entirely if no image provided */
+.modal.info-modal .modal-img-wrapper:empty {
   display: none;
+}
+
+.modal.info-modal .modal-body {
+  flex: 1;
+  padding: 28px 24px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
 .modal.info-modal .modal-title {
   font-size: var(--fs-3);
   color: var(--white-2);
-  margin-bottom: 12px;
+  line-height: 1.3;
+}
+
+.modal.info-modal .modal-subtitle {
+  font-size: var(--fs-7);
+  color: var(--orange-yellow-crayola);
+  font-weight: var(--fw-500);
 }
 
 .modal.info-modal .modal-text {
   font-size: var(--fs-6);
   color: var(--light-gray);
-  line-height: 1.6;
+  line-height: 1.7;
 }
+
+
+/* =========================
+   CARD STYLES
+   (shared by portfolio, jwst, testimonials)
+========================= */
+
+.modal-card {
+  position: relative;
+  background: var(--border-gradient-onyx);
+  border-radius: 14px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: var(--shadow-2);
+  transition: transform var(--transition-1), box-shadow var(--transition-1);
+  z-index: 1;
+}
+
+.modal-card::before {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  background: var(--bg-gradient-jet);
+  border-radius: inherit;
+  z-index: -1;
+}
+
+.modal-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-3);
+}
+
+/* thumbnail image at top of card */
+.modal-card .card-thumb {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: var(--onyx);
+}
+
+.modal-card .card-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-2);
+}
+
+.modal-card:hover .card-thumb img {
+  transform: scale(1.05);
+}
+
+/* text area below thumbnail */
+.modal-card .card-body {
+  padding: 14px 16px;
+}
+
+.modal-card .card-title {
+  color: var(--white-2);
+  font-size: var(--fs-5);
+  font-weight: var(--fw-500);
+  margin-bottom: 4px;
+}
+
+.modal-card .card-subtitle {
+  color: var(--light-gray-70);
+  font-size: var(--fs-7);
+  font-weight: var(--fw-300);
+  line-height: 1.4;
+}
+
+/* image-type card: slightly darker overlay hint */
+.modal-card.image-card .card-thumb::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, hsla(0,0%,0%,0.4), transparent);
+  opacity: 0;
+  transition: opacity var(--transition-1);
+}
+
+.modal-card.image-card:hover .card-thumb::after {
+  opacity: 1;
+}
+
+/* info-type card: accent left border */
+.modal-card.info-card {
+  border-left: 3px solid var(--orange-yellow-crayola);
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 600px) {
+
+  .modal.info-modal {
+    flex-direction: column;
+  }
+
+  .modal.info-modal .modal-img-wrapper {
+    flex: 0 0 auto;
+    width: 100%;
+    max-height: 200px;
+    padding: 16px;
+  }
+
+  .modal.info-modal .modal-img-wrapper img {
+    max-height: 160px;
+    object-fit: contain;
+  }
+
+  .modal.image-modal {
+    width: 100vw;
+    height: 100dvh;
+    border-radius: 0;
+    max-height: 100dvh;
+  }
+
+}
+
+
 /**
- * #clients 
+ * #clients ---------------------------------------------------------------
  */
 
 .clients { margin-bottom: 15px; }
