@@ -717,7 +717,7 @@ main {
 
 .modal {
   width: min(1400px, 95vw);
-  max-height: 85vh;
+  max-height: 100vh;
 
   background: var(--eerie-black-2);
   border: 1px solid var(--jet);
