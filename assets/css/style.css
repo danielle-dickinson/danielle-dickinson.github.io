@@ -681,9 +681,11 @@ main {
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
-/* =========================================================
-   GLOBAL MODAL SYSTEM
-========================================================= */
+
+  
+/* =========================
+   MODAL OVERLAY
+========================= */
 
 .modal-container {
   position: fixed;
@@ -693,8 +695,8 @@ main {
   justify-content: center;
   align-items: center;
 
-  background: rgba(0, 0, 0, 0.82);
-  backdrop-filter: blur(8px);
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(6px);
 
   opacity: 0;
   visibility: hidden;
@@ -702,8 +704,6 @@ main {
 
   transition: 0.25s ease;
   z-index: 9999;
-
-  padding: 1vh;
 }
 
 .modal-container.active {
@@ -712,258 +712,104 @@ main {
   pointer-events: all;
 }
 
-/* =========================================================
-   SHARED MODAL STYLING
-========================================================= */
+/* =========================
+   BASE MODAL BOX
+========================= */
 
 .modal {
-  position: relative;
-
   background: var(--eerie-black-2);
   border: 1px solid var(--jet);
-  border-radius: 20px;
+  border-radius: 16px;
 
-  box-shadow: var(--shadow-5);
+  position: relative;
+  overflow: hidden;
 
   transform: scale(0.96);
   transition: 0.25s ease;
 
-  overflow: hidden;
+  box-shadow: var(--shadow-5);
 }
 
 .modal-container.active .modal {
   transform: scale(1);
 }
 
-/* =========================================================
+/* =========================
    CLOSE BUTTON
-========================================================= */
+========================= */
 
 .modal-close-btn {
   position: absolute;
-  top: 14px;
-  right: 14px;
+  top: 10px;
+  right: 10px;
 
-  width: 42px;
-  height: 42px;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  background: rgba(255,255,255,0.08);
+  background: transparent;
   border: none;
-  border-radius: 50%;
 
+  font-size: 22px;
   color: var(--white-1);
-  font-size: 24px;
 
   cursor: pointer;
-
-  z-index: 100;
+  z-index: 10;
 }
 
-.modal-close-btn:hover {
-  background: rgba(255,255,255,0.14);
+/* =========================
+   IMAGE MODAL (FULLSCREEN)
+========================= */
+
+.modal.image-modal {
+  width: 95vw;
+  height: 95vh;
 }
 
-/* =========================================================
-   =========================================================
-      IMAGE-FOCUSED MODAL
-   =========================================================
-========================================================= */
-
-.image-modal {
-  width: 98vw;
-  height: 98vh;
-
-  max-width: none;
-  max-height: none;
-
-  display: flex;
-  flex-direction: column;
-
-  padding: 1rem;
-}
-
-/* IMAGE MODAL CONTENT */
-
-.image-modal .modal-content {
+.modal.image-modal .modal-img-wrapper {
   width: 100%;
   height: 100%;
-
-  display: flex;
-  flex-direction: column;
-
-  overflow: hidden;
-}
-
-/* IMAGE WRAPPER */
-
-.image-modal .modal-img-wrapper {
-  flex: 1;
-
-  width: 100%;
-  height: 100%;
-
   display: flex;
   justify-content: center;
   align-items: center;
-
-  overflow: hidden;
-
-  margin-bottom: 1rem;
 }
 
-/* IMAGE */
-
-.image-modal .modal-img-wrapper img,
-.image-modal [data-modal-img] {
-  width: auto;
-  height: auto;
-
-  max-width: 96vw;
-  max-height: 88vh;
-
+.modal.image-modal img {
+  max-width: 100%;
+  max-height: 100%;
   object-fit: contain;
-
   display: block;
-
-  border-radius: 14px;
 }
 
-/* OPTIONAL TITLE/TEXT */
+/* hide text in image mode */
+.modal.image-modal .modal-text,
+.modal.image-modal .modal-title {
+  display: none;
+}
 
-.image-modal .modal-title,
-.image-modal [data-modal-title] {
-  text-align: center;
+/* =========================
+   INFO MODAL (TEXT FOCUSED)
+========================= */
 
+.modal.info-modal {
+  width: min(720px, 92vw);
+  max-height: 85vh;
+
+  padding: 24px;
+  overflow-y: auto;
+}
+
+/* optional image in info mode */
+.modal.info-modal .modal-img-wrapper {
+  display: none;
+}
+
+.modal.info-modal .modal-title {
   font-size: var(--fs-3);
   color: var(--white-2);
-
-  margin-bottom: 0.5rem;
+  margin-bottom: 12px;
 }
 
-.image-modal .modal-text,
-.image-modal [data-modal-text] {
-  text-align: center;
-
-  color: var(--light-gray);
+.modal.info-modal .modal-text {
   font-size: var(--fs-6);
-
-  max-height: 10vh;
-  overflow-y: auto;
-}
-
-/* =========================================================
-   =========================================================
-      CONTENT / RESEARCH MODAL
-   =========================================================
-========================================================= */
-
-.content-modal {
-  width: min(900px, 92vw);
-  max-height: 92vh;
-
-  padding: 2.5rem;
-
-  overflow-y: auto;
-}
-
-/* CONTENT LAYOUT */
-
-.content-modal .modal-content {
-  width: 100%;
-}
-
-/* OPTIONAL HEADER IMAGE */
-
-.content-modal .modal-img-wrapper {
-  width: 100%;
-
-  display: flex;
-  justify-content: center;
-
-  margin-bottom: 1.5rem;
-}
-
-.content-modal .modal-img-wrapper img,
-.content-modal [data-modal-img] {
-  width: 100%;
-  max-height: 320px;
-
-  object-fit: cover;
-
-  border-radius: 14px;
-}
-
-/* TITLE */
-
-.content-modal .modal-title,
-.content-modal [data-modal-title] {
-  font-size: clamp(1.8rem, 3vw, 2.6rem);
-
-  color: var(--white-2);
-
-  margin-bottom: 1rem;
-
-  line-height: 1.2;
-}
-
-/* BODY TEXT */
-
-.content-modal .modal-text,
-.content-modal [data-modal-text] {
   color: var(--light-gray);
-
-  font-size: var(--fs-5);
-  line-height: 1.9;
-}
-
-/* PARAGRAPHS */
-
-.content-modal .modal-text p {
-  margin-bottom: 1.2rem;
-}
-
-/* HEADINGS */
-
-.content-modal .modal-text h2,
-.content-modal .modal-text h3,
-.content-modal .modal-text h4 {
-  color: var(--white-2);
-
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-}
-
-/* LINKS */
-
-.content-modal .modal-text a {
-  color: var(--orange-yellow-crayola);
-}
-
-/* LISTS */
-
-.content-modal .modal-text ul,
-.content-modal .modal-text ol {
-  padding-left: 1.5rem;
-
-  margin-bottom: 1.5rem;
-}
-
-/* =========================================================
-   OPTIONAL TIMESTAMP
-========================================================= */
-
-.modal time {
-  color: var(--vegas-gold);
-
-  font-size: var(--fs-7);
-
-  display: block;
-
-  margin-bottom: 1rem;
+  line-height: 1.6;
 }
 /**
  * #clients 
