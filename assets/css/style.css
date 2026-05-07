@@ -797,6 +797,7 @@ main {
 }
 
 .modal.image-modal .modal-caption {
+	display: block;
   padding: 16px 24px;
   border-top: 1px solid var(--jet);
   background: var(--eerie-black-2);
@@ -815,6 +816,10 @@ main {
   line-height: 1.5;
 }
 
+.modal.image-modal .modal-body {
+  display: none;
+}
+
 
 /* =========================
    INFO MODAL
@@ -829,6 +834,10 @@ main {
   display: flex;
   flex-direction: row;
   overflow: hidden;
+}
+
+.modal.info-modal .modal-caption {
+  display: none;
 }
 
 .modal.info-modal .modal-img-wrapper {
@@ -877,6 +886,12 @@ main {
   font-size: var(--fs-6);
   color: var(--light-gray);
   line-height: 1.7;
+}
+
+/* default: hide both until a type class is added */
+.modal .modal-caption,
+.modal .modal-body {
+  display: none;
 }
 
 
