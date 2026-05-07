@@ -683,7 +683,7 @@ main {
 }
 
 /* =========================
-   GLOBAL MODAL SYSTEM (FIXED)
+   GLOBAL MODAL SYSTEM
 ========================= */
 
 .modal-container {
@@ -694,8 +694,8 @@ main {
   justify-content: center;
   align-items: center;
 
-  background: rgba(0, 0, 0, 0.75);
-  backdrop-filter: blur(6px);
+  background: rgba(0, 0, 0, 0.82);
+  backdrop-filter: blur(8px);
 
   opacity: 0;
   visibility: hidden;
@@ -703,6 +703,8 @@ main {
 
   transition: 0.25s ease;
   z-index: 9999;
+
+  padding: 1vh;
 }
 
 .modal-container.active {
@@ -712,12 +714,15 @@ main {
 }
 
 /* =========================
-   MODAL BOX (UNIFIED LOOK)
+   FULLSCREEN MODAL BOX
 ========================= */
 
 .modal {
-  width: 95vw;
-  height: 95vh;
+  position: relative;
+
+  width: 98vw;
+  height: 98vh;
+
   max-width: none;
   max-height: none;
 
@@ -725,14 +730,17 @@ main {
   border: 1px solid var(--jet);
   border-radius: 18px;
 
-  padding: 28px;
-  overflow-y: auto;
-
   box-shadow: var(--shadow-5);
-  transform: scale(0.95);
+
+  transform: scale(0.96);
   transition: 0.25s ease;
 
-  position: relative;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 1rem;
 }
 
 .modal-container.active .modal {
@@ -745,16 +753,44 @@ main {
 
 .modal-close-btn {
   position: absolute;
-  top: 12px;
-  right: 12px;
+  top: 14px;
+  right: 14px;
 
-  background: transparent;
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: rgba(255,255,255,0.08);
   border: none;
+  border-radius: 50%;
 
-  font-size: 22px;
   color: var(--white-1);
+  font-size: 24px;
 
   cursor: pointer;
+
+  z-index: 100;
+}
+
+.modal-close-btn:hover {
+  background: rgba(255,255,255,0.14);
+}
+
+/* =========================
+   MODAL CONTENT
+========================= */
+
+.modal-content {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  overflow: hidden;
 }
 
 /* =========================
@@ -762,49 +798,77 @@ main {
 ========================= */
 
 .modal-img-wrapper {
+  flex: 1;
+
+  width: 100%;
+  height: 100%;
+
   display: flex;
   justify-content: center;
   align-items: center;
 
-  margin-bottom: 18px;
+  overflow: hidden;
+
+  margin-bottom: 1rem;
 }
 
-.modal-img-wrapper img {
-    width: auto;
+/* =========================
+   IMAGE
+========================= */
+
+.modal-img-wrapper img,
+[data-modal-img] {
+  width: auto;
   height: auto;
 
-  max-width: 100%;
-  max-height: 82vh;
-	
-	object-fit: contain;
-	display: block;
-  border-radius: 12px;
+  max-width: 96vw;
+  max-height: 88vh;
+
+  object-fit: contain;
+
+  display: block;
+
+  border-radius: 14px;
 }
 
 /* =========================
    TEXT CONTENT
 ========================= */
 
-.modal-title {
+.modal-title,
+[data-modal-title] {
   font-size: var(--fs-3);
   color: var(--white-2);
-  margin-bottom: 12px;
+
+  margin-bottom: 0.75rem;
+
+  text-align: center;
 }
 
-.modal-text {
+.modal-text,
+[data-modal-text] {
   color: var(--light-gray);
   font-size: var(--fs-6);
-  line-height: 1.6;
+  line-height: 1.7;
+
+  text-align: center;
+
+  overflow-y: auto;
 }
 
-/* optional: timestamp styling */
+/* =========================
+   OPTIONAL TIMESTAMP
+========================= */
+
 .modal time {
   color: var(--vegas-gold);
   font-size: var(--fs-7);
-  display: block;
-  margin-bottom: 12px;
-}
 
+  display: block;
+
+  margin-bottom: 12px;
+  text-align: center;
+}
 /**
  * #clients 
  */
