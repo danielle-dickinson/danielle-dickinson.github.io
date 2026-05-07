@@ -717,7 +717,7 @@ main {
 
 .modal {
   width: min(1400px, 95vw);
-  max-height: 100vh;
+  height: 85vh;
 
   background: var(--eerie-black-2);
   border: 1px solid var(--jet);
@@ -768,8 +768,8 @@ main {
 }
 
 .modal-img-wrapper img {
-  max-width: auto;
-  height: 1000px;
+  width: auto;
+  height: 50vh;
 
   border-radius: 12px;
 }
