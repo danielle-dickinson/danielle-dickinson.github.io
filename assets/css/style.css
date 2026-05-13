@@ -782,8 +782,8 @@ main {
 ========================= */
 
 .modal.image-modal {
-  width: 100vw !important;
-  height: 100vh !important;
+  width: 90vw !important;
+  height: 90vh !important;
   max-width: 100vw !important;
   max-height: 100vh !important;
   border-radius: 0 !important;
@@ -802,8 +802,8 @@ main {
 }
 
 .modal.image-modal .modal-img-wrapper img {
-  max-width: 100%;
-  max-height: 100%;
+	width: auto !important;
+	height: 80vh !important;
   object-fit: contain;
   display: block;
 }
