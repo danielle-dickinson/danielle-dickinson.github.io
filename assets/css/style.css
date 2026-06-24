@@ -509,6 +509,64 @@ main {
   transform: translateX(4px);
 }
 
+/* =========================
+   HIGHLIGHT BOX — YELLOW, HALF WIDTH
+========================= */
+
+.highlight-box {
+  position: relative;
+  display: block;
+  width: 50%;
+  min-width: 220px;
+
+  background: var(--bg-gradient-yellow-1);
+  padding: 18px 22px;
+  border-radius: 14px;
+
+  box-shadow: var(--shadow-2);
+  cursor: pointer;
+  z-index: 1;
+
+  transition: transform var(--transition-1), box-shadow var(--transition-1);
+}
+
+.highlight-box::before {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  background: var(--bg-gradient-yellow-2);
+  border-radius: inherit;
+  z-index: -1;
+}
+
+.highlight-box:hover,
+.highlight-box:focus {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-3);
+}
+
+.highlight-box-text {
+  color: var(--smoky-black);
+  font-size: var(--fs-6);
+  font-weight: var(--fw-600);
+  line-height: 1.4;
+}
+
+.highlight-box-subtext {
+  color: var(--eerie-black-1);
+  font-size: var(--fs-7);
+  font-weight: var(--fw-400);
+  margin-top: 4px;
+  opacity: 0.85;
+}
+
+/* don't let it stretch awkwardly on small screens */
+@media (max-width: 600px) {
+  .highlight-box {
+    width: 100%;
+  }
+}
+
 
 /*-----------------------------------*\
   #NAVBAR
