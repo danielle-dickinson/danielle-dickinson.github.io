@@ -519,7 +519,7 @@ main {
   width: 50%;
   min-width: 220px;
 
-  background: var(--bg-gradient-yellow-1);
+  background: var(--orange-yellow-crayola);
   padding: 18px 22px;
   border-radius: 14px;
 
@@ -534,7 +534,7 @@ main {
   content: "";
   position: absolute;
   inset: 1px;
-  background: var(--bg-gradient-yellow-2);
+  background: var(--orange-yellow-crayola);
   border-radius: inherit;
   z-index: -1;
 }
