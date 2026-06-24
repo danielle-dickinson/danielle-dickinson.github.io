@@ -200,33 +200,42 @@ if (navigationLinks.length > 0) {
   });
 }
 
-document.addEventListener('DOMContentLoaded', function () {
-  const serviceItems = document.querySelectorAll('.service-item[data-link-target]');
 
-  serviceItems.forEach(function (item) {
-    item.style.cursor = 'pointer';
-    item.addEventListener('click', function () {
-      goToResearchCard(item.dataset.linkTarget);
-    });
+
+// =========================
+// ABOUT-PAGE ICON -> RESEARCH CARD LINKING
+// =========================
+// Clicking a "What I'm doing" icon on the About page jumps to the
+// Research page and opens the matching JWST Dashboard card's modal.
+// Requires:
+//   1. data-link-target="card-xxx" on each .service-item in the About page
+//   2. id="card-xxx" on the matching .modal-card[data-modal-trigger] in Research
+
+const serviceItems = document.querySelectorAll('.service-item[data-link-target]');
+
+serviceItems.forEach(function (item) {
+  item.style.cursor = 'pointer';
+  item.addEventListener('click', function () {
+    goToResearchCard(item.dataset.linkTarget);
+  });
+});
+
+function goToResearchCard(targetId) {
+  // Step 1: click the existing "Research" nav button so the normal
+  // page-switching logic above runs exactly as it would for a real click
+  navigationLinks.forEach(function (link) {
+    if (link.textContent.trim().toLowerCase() === 'research') {
+      link.click();
+    }
   });
 
-  function goToResearchCard(targetId) {
-    // Step 1: click the existing "Research" nav button so your current
-    // page-switching logic in script.js runs exactly as it normally does
-    document.querySelectorAll('[data-nav-link]').forEach(function (link) {
-      if (link.textContent.trim().toLowerCase() === 'research') {
-        link.click();
-      }
-    });
-
-    // Step 2: give the page-switch a moment, then scroll to and "click"
-    // the matching research card, which fires your existing modal-open logic
-    setTimeout(function () {
-      const card = document.getElementById(targetId);
-      if (card) {
-        card.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        setTimeout(function () { card.click(); }, 300);
-      }
-    }, 100);
-  }
-});
+  // Step 2: give the page-switch a moment, then scroll to and "click"
+  // the matching research card, which fires the existing modal-open logic
+  setTimeout(function () {
+    const card = document.getElementById(targetId);
+    if (card) {
+      card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      setTimeout(function () { card.click(); }, 300);
+    }
+  }, 100);
+}
