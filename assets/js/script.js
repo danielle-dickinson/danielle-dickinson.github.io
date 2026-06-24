@@ -200,7 +200,6 @@ if (navigationLinks.length > 0) {
   });
 }
 
-<script>
 document.addEventListener('DOMContentLoaded', function () {
   const serviceItems = document.querySelectorAll('.service-item[data-link-target]');
 
@@ -231,4 +230,3 @@ document.addEventListener('DOMContentLoaded', function () {
     }, 100);
   }
 });
-</script>
