@@ -456,10 +456,11 @@ main {
 
 .link-box {
   position: relative;
-  display: flex;
-  justify-content: space-between;
+  display: inline-flex;
+  width: max-content;
+  justify-content: flex-start;
   align-items: center;
-  gap: 14px;
+  gap: 8px;
 
   background: var(--border-gradient-onyx);
   padding: 16px 20px;
