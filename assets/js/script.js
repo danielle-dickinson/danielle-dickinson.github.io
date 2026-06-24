@@ -199,3 +199,36 @@ if (navigationLinks.length > 0) {
     });
   });
 }
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const serviceItems = document.querySelectorAll('.service-item[data-link-target]');
+
+  serviceItems.forEach(function (item) {
+    item.style.cursor = 'pointer';
+    item.addEventListener('click', function () {
+      goToResearchCard(item.dataset.linkTarget);
+    });
+  });
+
+  function goToResearchCard(targetId) {
+    // Step 1: click the existing "Research" nav button so your current
+    // page-switching logic in script.js runs exactly as it normally does
+    document.querySelectorAll('[data-nav-link]').forEach(function (link) {
+      if (link.textContent.trim().toLowerCase() === 'research') {
+        link.click();
+      }
+    });
+
+    // Step 2: give the page-switch a moment, then scroll to and "click"
+    // the matching research card, which fires your existing modal-open logic
+    setTimeout(function () {
+      const card = document.getElementById(targetId);
+      if (card) {
+        card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        setTimeout(function () { card.click(); }, 300);
+      }
+    }, 100);
+  }
+});
+</script>
