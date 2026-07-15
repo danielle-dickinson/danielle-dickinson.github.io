@@ -156,7 +156,12 @@ input, textarea {
 html { font-family: var(--ff-poppins); }
 
 body {
-  background: url("../bkg.png") center/cover no-repeat fixed !important;
+  background-color: black;
+  background-image: url("../Bluer_version_small.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 
