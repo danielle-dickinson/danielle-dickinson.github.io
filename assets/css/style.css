@@ -814,8 +814,6 @@ main {
   opacity: 1;
   visibility: visible;
   pointer-events: all;
-	align-items: stretch;
-	justify-content: stretch;
 }
 
 .modal-container.active .modal.image-modal {
