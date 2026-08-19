@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Plot Buttons (CSS Only)</title>
+<style>
+  html, body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 40px;
+    background: transparent;
+  }
+
+  h1 {
+    color: white;
+  }
+
+  p {
+    color: white;
+  }
+
+  .player input[type="radio"] {
+    display: none;
+  }
+
+  .buttons label {
+    display: inline-block;
+    font-size: 16px;
+    padding: 10px 20px;
+    margin: 6px 4px;
+    border: 2px solid rgba(255, 162, 42, 0.7);
+    border-radius: 6px;
+    background: transparent;
+    color: rgba(255, 162, 42, 0.9);
+    cursor: pointer;
+  }
+
+  .buttons label:hover {
+    background: rgba(255, 162, 42, 0.15);
+  }
+
+  /* Highlight the active button: fill with the outline color, black text */
+  #v1:checked ~ .buttons label[for="v1"],
+  #v2:checked ~ .buttons label[for="v2"],
+  #v3:checked ~ .buttons label[for="v3"],
+  #v4:checked ~ .buttons label[for="v4"],
+  #v5:checked ~ .buttons label[for="v5"],
+  #v6:checked ~ .buttons label[for="v6"],
+  #v7:checked ~ .buttons label[for="v7"],
+  #v8:checked ~ .buttons label[for="v8"],
+  #v9:checked ~ .buttons label[for="v9"],
+  #v10:checked ~ .buttons label[for="v10"]
+  {
+    background: rgba(255, 162, 42, 0.7);
+    color: #000;
+  }
+
+  .plot-container {
+    margin-top: 30px;
+  }
+
+  .plot {
+    display: none;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .pane {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .pane iframe {
+    width: 65vw;
+    height: 50vh;
+    border: none;
+    border-radius: 8px;
+  }
+
+  .caption {
+    margin-top: 10px;
+    color: white;
+    font-size: 14px;
+  }
+
+  /* The magic: show the matching plot only when its radio is checked */
+  #v1:checked ~ .plot-container #plot1,
+  #v2:checked ~ .plot-container #plot2,
+  #v3:checked ~ .plot-container #plot3,
+  #v4:checked ~ .plot-container #plot4,
+  #v5:checked ~ .plot-container #plot5,
+  #v6:checked ~ .plot-container #plot6,
+  #v7:checked ~ .plot-container #plot7,
+  #v8:checked ~ .plot-container #plot8,
+  #v9:checked ~ .plot-container #plot9,
+  #v10:checked ~ .plot-container #plot10
+  {
+    display: flex;
+  }
+</style>
+</head>
+<body>
+
+  <h1>Select an Emission Line</h1>
+
+<p> to interact with a 3D reconstruction</p>
+
+  <div class="player">
+
+    <input type="radio" name="video" id="v1">
+    <input type="radio" name="video" id="v2">
+    <input type="radio" name="video" id="v3">
+    <input type="radio" name="video" id="v4">
+    <input type="radio" name="video" id="v5">
+    <input type="radio" name="video" id="v6">
+    <input type="radio" name="video" id="v7">
+    <input type="radio" name="video" id="v8">
+    <input type="radio" name="video" id="v9">
+    <input type="radio" name="video" id="v10" checked>
+
+    <div class="buttons">
+      <label for="v1">[Ar II] 6.985 &#x03BC;m</label>
+      <label for="v2">[Ar III] 8.991 &#x03BC;m</label>
+      <label for="v3">[S IV] 10.511 &#x03BC;m</label>
+      <label for="v4">[Ne II] 12.814 &#x03BC;m</label>
+      <label for="v5">[Ar V] 13.1022 &#x03BC;m</label>
+      <label for="v6">[Ne V] 14.32 &#x03BC;m</label>
+      <label for="v7">[Cl II] 14.3678 &#x03BC;m</label>
+      <label for="v8">[Ne III] 15.555 &#x03BC;m</label>
+      <label for="v9">[S III] 18.713 &#x03BC;m</label>
+      <label for="v10">[O IV] 25.89 &#x03BC;m</label>
+    </div>
+
+    <div class="plot-container">
+      <div class="plot" id="plot1">
+        <div class="pane">
+          <iframe src="https://danielle-dickinson.github.io/reconstructions/6.985_003_cube_volume_plot.html"></iframe>
+          <div class="caption">[Ar II] 6.985 μm &mdash; P4</div>
+        </div>
+        <div class="pane">
+          <iframe src="https://danielle-dickinson.github.io/reconstructions/6.985_005_cube_volume_plot.html"></iframe>
+          <div class="caption">[Ar II] 6.985 μm &mdash; P2</div>
+        </div>
+      </div>
+
+      <div class="plot" id="plot2">
+        <div class="pane">
+          <iframe src="https://danielle-dickinson.github.io/reconstructions/8.991_003_cube_volume_plot.html"></iframe>
+          <div class="caption">[Ar III] 8.991 μm &mdash; P4</div>
+        </div>
+        <div class="pane">
+          <iframe src="https://danielle-dickinson.github.io/reconstructions/10.511_005_cube_volume_plot.html"></iframe>
+          <div class="caption">[Ar III] 8.991 μm &mdash; P2</div>
+        </div>
+      </div>
+
+      <div class="plot" id="plot3">
+        <div class="pane">
+          <iframe src="https://danielle-dickinson.github.io/reconstructions/10.511_003_cube_volume_plot.html"></iframe>
+          <div class="caption">[S IV] 10.511 μm &mdash; P4</div>
+        </div>
+        <div class="pane">
+          <iframe src="https://danielle-dickinson.github.io/reconstructions/10.511_005_cube_volume_plot.html"></iframe>
+          <div class="caption">[S IV] 10.511 μm &mdash; P2</div>
+        </div>
+      </div>
+      <div class="plot" id="plot4">
+        <div class="pane">
+          <iframe src="https://danielle-dickinson.github.io/reconstructions/12.814_003_cube_volume_plot.html"></iframe>
+          <div class="caption">[Ne II] 12.814 μm &mdash; P4</div>
+        </div>
+        <div class="pane">
+          <iframe src="https://danielle-dickinson.github.io/reconstructions/12.814_005_cube_volume_plot.html"></iframe>
+          <div class="caption">[Ne II] 12.814 μm &mdash; P2</div>
+        </div>
+
+      </div>
+      <div class="plot" id="plot5">
+        <div class="pane">
+          <iframe src="https://danielle-dickinson.github.io/reconstructions/13.1022_003_cube_volume_plot.html"></iframe>
+          <div class="caption">[Ar V] 13.1022 μm &mdash; P4</div>
+        </div>
+        <div class="pane">
+          <iframe src="https://danielle-dickinson.github.io/reconstructions/13.1022_005_cube_volume_plot.html"></iframe>
+          <div class="caption">[Ar V] 13.1022 μm &mdash; P2</div>
+        </div>
+
+      </div>
+      <div class="plot" id="plot6">
+        <div class="pane">
+          <iframe src="https://danielle-dickinson.github.io/reconstructions/14.32_005_cube_volume_plot.html"></iframe>
+          <div class="caption">[Ne V] 14.32 μm &mdash; P2</div>
+        </div>
+        <div class="pane">
+          <iframe src=""></iframe>
+          <div class="caption"></div>
+        </div>
+      </div>
+
+      <div class="plot" id="plot7">
+        <div class="pane">
+          <iframe src="https://danielle-dickinson.github.io/reconstructions/14.3678_003_cube_volume_plot.html"></iframe>
+          <div class="caption">[Cl II] 14.3678 μm &mdash; P4</div>
+        </div>
+        <div class="pane">
+          <iframe src=""></iframe>
+          <div class="caption"></div>
+        </div>
+      </div>
+      <div class="plot" id="plot8">
+        <div class="pane">
+          <iframe src="https://danielle-dickinson.github.io/reconstructions/15.555_003_cube_volume_plot.html"></iframe>
+          <div class="caption">[Ne III] 15.555 μm &mdash; P4</div>
+        </div>
+        <div class="pane">
+          <iframe src="https://danielle-dickinson.github.io/reconstructions/15.555_005_cube_volume_plot.html"></iframe>
+          <div class="caption">[Ne III] 15.555 μm &mdash; P2</div>
+        </div>
+      </div>
+      <div class="plot" id="plot9">
+        <div class="pane">
+          <iframe src="https://danielle-dickinson.github.io/reconstructions/18.713_003_cube_volume_plot.html"></iframe>
+          <div class="caption">[S III] 18.713 μm &mdash; P4</div>
+        </div>
+        <div class="pane">
+          <iframe src="https://danielle-dickinson.github.io/reconstructions/18.713_005_cube_volume_plot.html"></iframe>
+          <div class="caption">[S III] 18.713 μm &mdash; P2</div>
+        </div>
+      </div>
+      <div class="plot" id="plot10">
+        <div class="pane">
+          <iframe src="https://danielle-dickinson.github.io/reconstructions/25.89_003_cube_volume_plot.html"></iframe>
+          <div class="caption">[O IV] 25.89 μm &mdash; P4</div>
+        </div>
+        <div class="pane">
+          <iframe src="https://danielle-dickinson.github.io/reconstructions/25.89_005_cube_volume_plot.html"></iframe>
+          <div class="caption">[O IV] 25.89 μm &mdash; P2</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>
